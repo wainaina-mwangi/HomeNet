@@ -5,7 +5,7 @@ import { ThemeProvider }from "./pages/ThemeContext";
 
 const App = () => {
   return (
-    <div className="container">
+    <div>
       <ThemeProvider>
       <Navbar />
       <Routes>

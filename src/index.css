@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@variant dark (&:where(.dark, .dark *));
 
 
 
@@ -10,8 +11,18 @@
     margin: 0;
 }
 
-body{
-    font-family: "Varela Round", sans-serif;
+
+
+body {
+  background-color: #f8fafc; 
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 40px 40px;
+  font-family: "Varela Round", sans-serif;
+}
+
+.dark body {
+  background-color: #020617; 
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
 }
 
 

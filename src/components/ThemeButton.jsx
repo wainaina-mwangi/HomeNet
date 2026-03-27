@@ -1,35 +1,41 @@
-import React from "react";
 import { useTheme } from "../pages/ThemeContext";
+import { MdDarkMode } from "react-icons/md";
+import { LuSunMedium } from "react-icons/lu";
 
 const ThemeButton = () => {
-  const [theme, toggleTheme] = useTheme();
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <div>
-      <button
-        onClick={toggleTheme}
-        className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 transition-all hover:scale-110"
-      >
+    <button
+      onClick={toggleTheme}
+      className="group relative flex items-center justify-center p-2.5 rounded-2xl 
+                 transition-all duration-500 ease-spring active:scale-90
+                 /* Light Mode: Glassy Slate */
+                 bg-slate-100/50 border border-slate-200 shadow-sm
+                 /* Dark Mode: Neon Blue Depth */
+                 dark:bg-blue-500/10 dark:border-blue-500/30 dark:shadow-[0_0_15px_rgba(59,130,246,0.2)]
+                 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 overflow-hidden"
+      aria-label="Toggle Theme"
+    >
+      {/* Background Glow Effect */}
+      <span className="absolute inset-0 z-0 bg-gradient-to-tr from-blue-400/20 to-cyan-400/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+      <div className="relative z-10 flex items-center justify-center transition-all duration-700 ease-in-out">
         {theme === "light" ? (
-          /* Moon Icon for Light Mode */
-          <svg
-            className="w-6 h-6 text-gray-800"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-          </svg>
+          <div className="flex items-center justify-center animate-in fade-in zoom-in spin-in-90 duration-500">
+            <MdDarkMode className="text-xl text-slate-700 transition-transform group-hover:-rotate-12" />
+          </div>
         ) : (
-          /* Sun Icon for Dark Mode */
-          <svg
-            className="w-6 h-6 text-yellow-400"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
-          </svg>
+          <div className="flex items-center justify-center animate-in fade-in zoom-in spin-in-180 duration-500">
+            <LuSunMedium className="text-xl text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.8)] transition-transform group-hover:rotate-90" />
+          </div>
         )}
-      </button>
-    </div>
+      </div>
+
+      {/* Hidden tech-style border corner (Modern Detail) */}
+      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-blue-500/50 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-blue-500/50 opacity-0 group-hover:opacity-100 transition-opacity" />
+    </button>
   );
 };
 
