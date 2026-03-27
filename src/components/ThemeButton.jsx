@@ -23,11 +23,11 @@ const ThemeButton = () => {
       <div className="relative z-10 flex items-center justify-center transition-all duration-700 ease-in-out">
         {theme === "light" ? (
           <div className="flex items-center justify-center animate-in fade-in zoom-in spin-in-90 duration-500">
-            <MdDarkMode className="text-xl text-slate-700 transition-transform group-hover:-rotate-12" />
+            < LuSunMedium className="text-xl text-slate-700 transition-transform group-hover:-rotate-12" />
           </div>
         ) : (
           <div className="flex items-center justify-center animate-in fade-in zoom-in spin-in-180 duration-500">
-            <LuSunMedium className="text-xl text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.8)] transition-transform group-hover:rotate-90" />
+            < MdDarkMode className="text-xl text-blue-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.8)] transition-transform group-hover:rotate-90" />
           </div>
         )}
       </div>

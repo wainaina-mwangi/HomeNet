@@ -37,3 +37,34 @@ body {
 .container{
     max-width: 90%;
 }
+
+
+
+.btn{
+    background: #2563EB;
+    color: #ffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: ease-in-out .5s;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn:hover{
+    background: #033297;
+    color: #ffff;
+}
+
+
+@keyframes drift {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -50px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-drift {
+  animation: drift 15s infinite alternate ease-in-out;
+}
