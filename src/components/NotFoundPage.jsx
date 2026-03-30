@@ -27,7 +27,7 @@ const NotFoundPage = () => {
       {/* Modern Action Button */}
       <Link
         to="/"
-        className="group btn flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-8 px-10 rounded-2xl transition-all"
+        className="  group  flex items-center gap-3   text-blue font-bold py-8 px-10 rounded-2xl transition-all"
       >
         <HiOutlineArrowLeft className="group-hover:-translate-x-1 transition-transform" />
         Back To Home
