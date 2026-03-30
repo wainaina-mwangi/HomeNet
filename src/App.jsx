@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero"
+// import Hero from "./components/Hero"
 import TopNavbar from "./components/TopNavbar";
 import NotFoundPage from "./components/NotFoundPage";
 import { Routes, Route } from "react-router-dom";
@@ -13,7 +13,6 @@ const App = () => {
       <ThemeProvider>
         <TopNavbar/>
       <Navbar />
-      <Hero/>
       <Routes>
         <Route path='/'  element={<Home/>}/>
         <Route path="*" element={<NotFoundPage />} />

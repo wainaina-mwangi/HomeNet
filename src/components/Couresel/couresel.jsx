@@ -4,8 +4,8 @@ import { GoPaperAirplane } from "react-icons/go";
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import image_4 from "../../assets/IMAGE_4.png";
-import image_2 from "../../assets/IMAGE_2.png";
 import image_1 from "../../assets/IMAGE_1.png";
+import image_2 from "../../assets/IMAGE_2.png";
 import { Link } from "react-router-dom";
 
 const Couresel = () => {
@@ -34,140 +34,73 @@ const Couresel = () => {
         stopOnHover={false}
         className="main-carousel"
       >
-        {/* Slide 1 */}
-
+        {/* --- SLIDE 1 --- */}
+       {/* --- SLIDE 1: SPEED --- */}
         <div className="relative h-100 sm:h-125 md:h-150">
-          <img
-            src={image_4}
-            className="h-full w-full object-cover"
-            alt="Ultra-Fast Internet"
-          />
-
+          <img src={image_4} className="h-full w-full object-cover" alt="Ultra-Fast Internet" />
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={staggerContainer}
-            className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-900/40 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
+            initial="hidden" whileInView="visible" variants={staggerContainer}
+            className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
-            <motion.h1
-              variants={fadeInUp}
-              className="text-2xl sm:text-4xl md:text-6xl font-black text-white tracking-tighter mb-3"
-            >
-              Ultra-Fast internet that truly <br className="hidden sm:block" />
-              <span className="text-blue-400"> feels like Home</span>
+            <motion.h1 variants={fadeInUp} className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">
+              Ultra-Fast Internet that <br/> <span className="text-blue-400">feels like Home</span>
             </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="text-slate-200 text-sm sm:text-lg md:text-xl max-w-2xl mb-6 md:mb-8 line-clamp-3 sm:line-clamp-none"
-            >
-              Experience speeds with 99.9% uptime. No hidden fees, just pure
-              connectivity.
+            <motion.p variants={fadeInUp} className="text-slate-200 text-sm sm:text-lg md:text-xl max-w-2xl mb-8">
+              Experience blazing speeds with 99.9% uptime. No hidden fees, no data caps—just pure connectivity.
             </motion.p>
-
-            <div className="flex gap-2">
-              <Link
-                to="/plans"
-                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
-              >
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/plans" className="btn flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95 shadow-lg shadow-blue-500/20">
                 View Our Plans <GoPaperAirplane />
               </Link>
-
-              <Link
-                to="/plans"
-                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
-              >
-                Browse Plans <GoPaperAirplane />
+              <Link to="/contact" className="btn flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold py-3 px-8 rounded-2xl transition-all active:scale-95">
+                Check Coverage
               </Link>
             </div>
           </motion.div>
         </div>
 
-        {/* Slide 2 */}
+        {/* --- SLIDE 2 --- */}
+        {/* --- SLIDE 2: RELIABILITY --- */}
         <div className="relative h-100 sm:h-125 md:h-150">
-          <img
-            src={image_2}
-            className="h-full w-full object-cover"
-            alt="Unlimited Gaming"
-          />
-
+          <img src={image_2} className="h-full w-full object-cover" alt="Reliable Connection" />
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={staggerContainer}
-            className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-900/40 to-transparent flex flex-col justify-center items-center md:items-center text-center md:text-center px-6 md:px-20"
+            initial="hidden" whileInView="visible" variants={staggerContainer}
+            className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
-            <motion.h2
-              variants={fadeInUp}
-              className="text-4xl md:text-7xl font-black text-white mb-3"
-            >
-              Built for{" "}
-              <span className="text-blue-400 font-outline-2">Gamers</span>
-            </motion.h2>
-            <motion.p
-              variants={fadeInUp}
-              className="text-slate-200 text-sm md:text-xl max-w-md mb-6"
-            >
-              Dominate the leaderboard with ultra-low latency and zero packet
-              loss. Whether you're streaming on Twitch or downloading 100GB
-              patches, we’ve got your back.
+            <motion.h1 variants={fadeInUp} className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">
+              Work & Stream <br/> Without <span className="text-blue-400">The Buffer</span>
+            </motion.h1>
+            <motion.p variants={fadeInUp} className="text-slate-200 text-sm sm:text-lg md:text-xl max-w-2xl mb-8">
+              Video calls that never freeze and large files that upload in seconds. Business-grade reliability at home.
             </motion.p>
-             <div className="flex gap-2">
-              <Link
-                to="/plans"
-                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
-              >
-                View Our Plans <GoPaperAirplane />
-              </Link>
-
-              <Link
-                to="/plans"
-                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
-              >
-                Browse Plans <GoPaperAirplane />
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/plans" className="btn flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95">
+                Get Connected <GoPaperAirplane />
               </Link>
             </div>
-            <motion.div variants={fadeInUp} className="flex gap-2"></motion.div>
           </motion.div>
         </div>
 
-        {/* Slide 3 */}
+        {/* --- SLIDE 3 --- */}
+        {/* --- SLIDE 3: LOCAL SUPPORT --- */}
         <div className="relative h-100 sm:h-125 md:h-150">
-          <img
-            src={image_1}
-            className="h-full w-full object-cover"
-            alt="Mesh WiFi"
-          />
+          <img src={image_1} className="h-full w-full object-cover" alt="Nairobi Local Support" />
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeInUp}
-            className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-900/40 to-transparent  flex flex-col justify-center items-center text-center px-4"
+            initial="hidden" whileInView="visible" variants={staggerContainer}
+            className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-center items-center text-center px-4"
           >
-            <h2 className="text-3xl md:text-6xl font-black text-white mb-3">
-              Powering Your
-              <span className="text-blue-400 font-outline-2">Home Office</span>
-            </h2>
-            <motion.p
-              variants={fadeInUp}
-              className="text-slate-200 text-sm md:text-xl max-w-md mb-6"
-            >
-              Video calls that never freeze. Large files that upload in seconds.
-              Business-grade reliability, right in your living room.
+            <motion.h1 variants={fadeInUp} className="text-3xl md:text-7xl font-black text-white mb-4 tracking-tighter">
+              Nairobi's Most <br/> <span className="text-blue-400">Trusted Network</span>
+            </motion.h1>
+            <motion.p variants={fadeInUp} className="text-slate-200 text-sm md:text-xl max-w-md mb-8">
+              We’re your neighbors. Enjoy 24/7 local support and expert setup within 24 hours.
             </motion.p>
-            <div className="flex gap-2">
-              <Link
-                to="/plans"
-                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
-              >
-                View Our Plans <GoPaperAirplane />
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/plans" className="btn flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95">
+                Join homeNet <GoPaperAirplane />
               </Link>
-
-              <Link
-                to="/plans"
-                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
-              >
-                Browse Plans <GoPaperAirplane />
+              <Link to="/contact" className="btn flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-bold py-3 px-8 rounded-2xl transition-all active:scale-95">
+                Contact Us
               </Link>
             </div>
           </motion.div>

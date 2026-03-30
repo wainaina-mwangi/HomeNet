@@ -59,6 +59,23 @@ body {
 }
 
 
+.top-nav{
+  padding: 20px 30px;
+  
+}
+
+.social_link li{
+  background-color: #033297;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all ease-in-out .5s;
+}
+
+.social_link li:hover{
+  background-color: #2563EB;
+}
+
+
 @keyframes drift {
   0% { transform: translate(0, 0); }
   50% { transform: translate(30px, -50px); }
