@@ -1,11 +1,11 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { FaArrowRight } from "react-icons/fa";
+import { GoPaperAirplane } from "react-icons/go";
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import image_4 from "../../assets/IMAGE_4.png";
 import image_2 from "../../assets/IMAGE_2.png";
-import image_3 from "../../assets/IMAGE_3.png";
+import image_1 from "../../assets/IMAGE_1.png";
 import { Link } from "react-router-dom";
 
 const Couresel = () => {
@@ -47,7 +47,7 @@ const Couresel = () => {
             initial="hidden"
             whileInView="visible"
             variants={staggerContainer}
-            className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-slate-900/40 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
+            className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-900/40 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
             <motion.h1
               variants={fadeInUp}
@@ -65,11 +65,21 @@ const Couresel = () => {
               connectivity.
             </motion.p>
 
-            <button className="btn group overflow-hidden transition-all active:scale-95">
-              <Link to="/plans" className="flex justify-center align-center gap-2 px-6 py-3 ">
-                View Our Plans <FaArrowRight />
+            <div className="flex gap-2">
+              <Link
+                to="/plans"
+                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
+              >
+                View Our Plans <GoPaperAirplane />
               </Link>
-            </button>
+
+              <Link
+                to="/plans"
+                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
+              >
+                Browse Plans <GoPaperAirplane />
+              </Link>
+            </div>
           </motion.div>
         </div>
 
@@ -85,7 +95,7 @@ const Couresel = () => {
             initial="hidden"
             whileInView="visible"
             variants={staggerContainer}
-            className="absolute inset-0 bg-linear-to-t md:bg-linear-to-r from-slate-900/90 to-transparent flex flex-col justify-center items-center md:items-center text-center md:text-center px-6 md:px-20"
+            className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-900/40 to-transparent flex flex-col justify-center items-center md:items-center text-center md:text-center px-6 md:px-20"
           >
             <motion.h2
               variants={fadeInUp}
@@ -102,6 +112,21 @@ const Couresel = () => {
               loss. Whether you're streaming on Twitch or downloading 100GB
               patches, we’ve got your back.
             </motion.p>
+             <div className="flex gap-2">
+              <Link
+                to="/plans"
+                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
+              >
+                View Our Plans <GoPaperAirplane />
+              </Link>
+
+              <Link
+                to="/plans"
+                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
+              >
+                Browse Plans <GoPaperAirplane />
+              </Link>
+            </div>
             <motion.div variants={fadeInUp} className="flex gap-2"></motion.div>
           </motion.div>
         </div>
@@ -109,7 +134,7 @@ const Couresel = () => {
         {/* Slide 3 */}
         <div className="relative h-100 sm:h-125 md:h-150">
           <img
-            src={image_3}
+            src={image_1}
             className="h-full w-full object-cover"
             alt="Mesh WiFi"
           />
@@ -117,7 +142,7 @@ const Couresel = () => {
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
-            className="absolute inset-0 bg-slate-900/50  flex flex-col justify-center items-center text-center px-4"
+            className="absolute inset-0 bg-linear-to-t from-blue-900/90 via-blue-900/40 to-transparent  flex flex-col justify-center items-center text-center px-4"
           >
             <h2 className="text-3xl md:text-6xl font-black text-white mb-3">
               Powering Your
@@ -130,6 +155,21 @@ const Couresel = () => {
               Video calls that never freeze. Large files that upload in seconds.
               Business-grade reliability, right in your living room.
             </motion.p>
+            <div className="flex gap-2">
+              <Link
+                to="/plans"
+                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
+              >
+                View Our Plans <GoPaperAirplane />
+              </Link>
+
+              <Link
+                to="/plans"
+                className="btn gap-2 group overflow-hidden transition-all active:scale-95 "
+              >
+                Browse Plans <GoPaperAirplane />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </Carousel>

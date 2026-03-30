@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lilita+One&family=Varela+Round&display=swap');
 @variant dark (&:where(.dark, .dark *));
 
 
@@ -17,7 +17,7 @@ body {
   background-color: #f8fafc; 
   background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
   background-size: 40px 40px;
-  font-family: "Varela Round", sans-serif;
+ font-family: "Lilita One", sans-serif;
 }
 
 .dark body {
