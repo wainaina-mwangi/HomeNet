@@ -36,10 +36,10 @@ const About = () => {
   ];
 
   return (
-  <section className="homenet-section">
+  <section className="homenet-section bg-brand-navy">
   <div className="container">
-    <h2 className="section-title">Why Choose HomeNet?</h2>
-
+    <h2 className="section-title">Why Choose <span className="text-brand-orange">HomeNet?</span> </h2>
+    <p className="text-center text-brand-white"> "HomeNet is more than just an internet provider—we’re your gateway to a faster world."</p>
     <div className="homenet-grid">
       {homeNet.map((item) => (
         <div key={item.id} className="homenet-card">

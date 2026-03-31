@@ -1,12 +1,13 @@
 import React from "react";
-import { LuMoveLeft } from "react-icons/lu";
-import './NotFound.css'
+import { MdArrowCircleLeft } from "react-icons/md";
+import { Link } from "react-router-dom";
+import "./NotFound.css";
 
 const NotFoundPage = () => {
   return (
-    <main className="min-h-screen w-full flex flex-col items-center justify-center bg-brand-navy p-6 font-sans">
-      <div className=" found max-w-xl w-full flex flex-col items-center text-center bg-brand-backup">
-        <h1 className="text-white text-8xl md:text-9xl font-black tracking-tighter">
+    <main className=" bg  min-h-[80vh] w-full flex flex-col items-center justify-center bg-brand-navy p-6 font-sans">
+      <div className=" found max-w-xl sm:max-w-sm w-full flex flex-col items-center text-center bg-brand-backup">
+        <h1 className="text-white text-6xl md:text-5xl font-black tracking-tighter mb-7">
           404
         </h1>
 
@@ -14,19 +15,18 @@ const NotFoundPage = () => {
           Page not found
         </h2>
 
-        <p className="text-brand-gray text-lg leading-relaxed max-w-md mt-4">
+        <p className="text-brand-white text-sm leading-relaxed max-w-md ">
           The page you are looking for no longer exists. Perhaps you can return
           back to the site’s homepage and see if you can find what you are
           looking for.
         </p>
 
-        <a
-          href="/"
-          className=" btn mt-10 inline-flex items-center gap-3 bg-brand-orange text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200"
+        <Link
+          to="/"
+          className="btn flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/70 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95"
         >
-          <LuMoveLeft className="w-4 h-4" />
-          Back Home
-        </a>
+            <MdArrowCircleLeft  size={25}/> Back Home 
+        </Link>
       </div>
     </main>
   );

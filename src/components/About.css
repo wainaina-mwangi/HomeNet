@@ -1,7 +1,7 @@
 
 .homenet-section {
   padding: 80px 20px;
-  background-color: #f8fafc;
+  /* background-color: #f8fafc; */
   display: flex;
   justify-content: center;
 }
@@ -15,8 +15,8 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 50px;
+  color: #FFFFFF;
+  /* margin-bottom: 50px; */
 }
 
 
@@ -29,7 +29,7 @@
 
 
 .homenet-card {
-  background: #0f172a;
+  background: #ffffff;
   border: 2px solid #e2e8f0; 
   border-radius: 16px;
   overflow: hidden;
@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-top: 50px;
 }
 
 
@@ -80,11 +81,11 @@
 
 .icon-box {
   color: white;
-  background: rgb(3, 50, 206);
+  background: #FF6D00;
   backdrop-filter: blur(4px);
   padding: 15px;
   border-radius: 50%;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #1A237E;
 }
 
 .homenet-card:hover .hover-overlay {
@@ -105,13 +106,13 @@
 .content-box h3 {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #1A237E;
   margin-bottom: 12px;
 }
 
 .content-box p {
   font-size: 1rem;
-  color: #475569;
+  color: #1A237E;
   line-height: 1.6;
   max-width: 90%; 
 }
@@ -119,7 +120,7 @@
 
 @media (max-width: 480px){
 
-    .homenet-grid {
+ .homenet-grid {
     grid-template-columns: 1fr; 
     gap: 15px;
   }
@@ -128,15 +129,19 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #ffffff;
   margin-bottom: 40px;
 }
+
+
 
 .homenet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
+  height: 80%;
+  
 }
 
 homenet-card {
@@ -148,5 +153,21 @@ homenet-card {
   display: flex;
   flex-direction: column;
   height: 60%;
+
 }
+
+.content-box h3 {
+  font-size: 1rem;
+  font-weight: bolder;
+  
+  
+}
+
+.content-box p {
+  font-size: 0.9rem;
+  color: #1A237E;
+  /* line-height: 1.6; */
+   max-width: 100%; 
+}
+
 }

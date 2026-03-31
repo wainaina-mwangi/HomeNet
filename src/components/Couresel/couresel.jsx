@@ -43,7 +43,7 @@ const Couresel = () => {
             className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-slate-900/60 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
             <motion.h1 variants={fadeInUp} className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">
-              Ultra-Fast Internet that <br/> <span className="text-blue-400">feels like Home</span>
+              Ultra-Fast Internet that <br/> <span className="text-brand-orange">feels like Home</span>
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-slate-200 text-sm sm:text-lg md:text-xl max-w-2xl mb-8">
               Experience blazing speeds with 99.9% uptime. No hidden fees, no data caps—just pure connectivity.
@@ -68,7 +68,7 @@ const Couresel = () => {
             className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-slate-900/60 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
             <motion.h1 variants={fadeInUp} className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-4">
-              Work & Stream <br/> Without <span className="text-blue-400">The Buffer</span>
+              Work & Stream <br/> Without <span className="text-brand-orange">The Buffer</span>
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-slate-200 text-sm sm:text-lg md:text-xl max-w-2xl mb-8">
               Video calls that never freeze and large files that upload in seconds. Business-grade reliability at home.
@@ -90,7 +90,7 @@ const Couresel = () => {
             className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-slate-900/60 to-transparent flex flex-col justify-center items-center text-center px-4"
           >
             <motion.h1 variants={fadeInUp} className="text-3xl md:text-7xl font-black text-white mb-4 tracking-tighter">
-              Nairobi's Most <br/> <span className="text-blue-400">Trusted Network</span>
+              Nairobi's Most <br/> <span className="text-brand-orange">Trusted Network</span>
             </motion.h1>
             <motion.p variants={fadeInUp} className="text-slate-200 text-sm md:text-xl max-w-md mb-8">
               We’re your neighbors. Enjoy 24/7 local support and expert setup within 24 hours.

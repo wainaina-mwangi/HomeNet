@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import TopNavbar from "./components/TopNavbar";
 import About from "./components/About";
 import NotFoundPage from "./components/NotFoundPage";
+
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider }from "./pages/ThemeContext";
 import Home from "./pages/Home";

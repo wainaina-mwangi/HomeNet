@@ -1,5 +1,39 @@
 .found{
   border-radius: 10px;
-  padding: 10px 40px;
+  padding: 20px 70px;
 
+}
+
+
+.bg{
+    background-image: 
+    linear-gradient( rgba(26, 25, 25, 0.788), rgba(0, 0, 0, 0.74)),
+    url('../assets/IMAGE_4.png');
+    background-position: center;
+    background-repeat: no repeat;
+    
+}
+
+
+
+
+@media (max-width: 480px){
+ .bg{
+    min-height: 60vh;
+    
+
+ }
+
+ .found{
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 300px;
+
+}
+
+.btn{
+    
+}
+
+   
 }

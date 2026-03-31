@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lilita+One&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Cal+Sans&family=Lilita+One&family=Varela+Round&display=swap');
+
 @variant dark (&:where(.dark, .dark *));
 @theme {
   --color-brand-navy: #1A237E;
@@ -62,16 +63,12 @@ body {
 }
 
 .social_link li{
-  background-color: #033297;
+  /* background-color: #033297; */
   color: #FF6D00;
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: all ease-in-out .5s;
+  
 }
 
-.social_link li:hover{
-  background-color: #2962FF;
-}
+
 
 
 .about{
