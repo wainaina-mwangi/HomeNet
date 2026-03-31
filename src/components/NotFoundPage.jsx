@@ -1,38 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { GoAlertFill } from "react-icons/go";
-import { HiOutlineArrowLeft } from "react-icons/hi2";
+import { LuMoveLeft } from "react-icons/lu";
+import './NotFound.css'
 
 const NotFoundPage = () => {
   return (
-    <div className="min-h-screen  flex items-center justify-center flex-col px-6 text-center">
-      <div className="relative mb-3">
-        <GoAlertFill size={100} className="text-amber-500 relative" />
-      </div>
+    <main className="min-h-screen w-full flex flex-col items-center justify-center bg-brand-navy p-6 font-sans">
+      <div className=" found max-w-xl w-full flex flex-col items-center text-center bg-brand-backup">
+        <h1 className="text-white text-8xl md:text-9xl font-black tracking-tighter">
+          404
+        </h1>
 
-      <h1 className="text-8xl md:text-9xl dark:text-white font-black text-slate-900 tracking-tighter">
-        404
-      </h1>
-
-      <div className="mt-4 mb-6">
-        <h2 className="text-2xl font-bold text-slate-800 mb-2">
-          Oops! Connection Lost.
+        <h2 className="text-white text-3xl md:text-4xl font-bold mt-4">
+          Page not found
         </h2>
-        <p className="text-slate-600 max-w-sm mx-auto leading-relaxed">
-          The page you are looking for doesn't exist or has been moved. Let's
-          get you back to the homeNet homepage.
-        </p>
-      </div>
 
-      {/* Modern Action Button */}
-      <Link
-        to="/"
-        className="  group  flex items-center gap-3   text-blue font-bold py-8 px-10 rounded-2xl transition-all"
-      >
-        <HiOutlineArrowLeft className="group-hover:-translate-x-1 transition-transform" />
-        Back To Home
-      </Link>
-    </div>
+        <p className="text-brand-gray text-lg leading-relaxed max-w-md mt-4">
+          The page you are looking for no longer exists. Perhaps you can return
+          back to the site’s homepage and see if you can find what you are
+          looking for.
+        </p>
+
+        <a
+          href="/"
+          className=" btn mt-10 inline-flex items-center gap-3 bg-brand-orange text-white px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200"
+        >
+          <LuMoveLeft className="w-4 h-4" />
+          Back Home
+        </a>
+      </div>
+    </main>
   );
 };
 

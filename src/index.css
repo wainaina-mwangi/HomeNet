@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lilita+One&family=Varela+Round&display=swap');
 @variant dark (&:where(.dark, .dark *));
+@theme {
+  --color-brand-navy: #1A237E;
+  --color-brand-backup: #2962ff;
+  --color-brand-orange: #ff6d00;
+  --color-brand-white: #ffffff;
+}
 
 
 
@@ -26,13 +32,6 @@ body {
 }
 
 
-:root{
-    --primary-color:#2563EB;
-    --secondary-color:#0F172A;
-    --background-color:#F8FAFC;
-}
-
-
 
 .container{
     max-width: 90%;
@@ -41,11 +40,11 @@ body {
 
 
 .btn{
-    background: rgba(21, 214, 221, 0.308);
+    /* background: rgba(21, 214, 221, 0.308); */
     color: #ffff;
     padding: 10px 20px;
     border-radius: 20px;
-    border:2px solid rgb(44, 151, 212);
+    /* border:2px solid rgb(44, 151, 212); */
     transition: ease-in-out .5s;
     margin-top: 15px;
     display: flex;
@@ -54,10 +53,7 @@ body {
 
 }
 
-.btn:hover{
-    background: #033297;
-    color: #ffff;
-}
+
 
 
 .top-nav{
@@ -67,13 +63,19 @@ body {
 
 .social_link li{
   background-color: #033297;
+  color: #FF6D00;
   padding: 6px 12px;
   border-radius: 8px;
   transition: all ease-in-out .5s;
 }
 
 .social_link li:hover{
-  background-color: #2563EB;
+  background-color: #2962FF;
+}
+
+
+.about{
+  margin-top: 40px;
 }
 
 

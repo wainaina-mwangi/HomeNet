@@ -7,20 +7,20 @@ import { MdLocationPin } from "react-icons/md";
 const TopNavbar = () => {
   return (
     
-    <div className='top-nav hidden sm:flex px-6 py-5 bg-slate-900 text-white/80 justify-between items-center text-sm border-b border-white/5'>
+    <div className='top-nav hidden sm:flex px-6 py-5 bg-brand-backup/60 text-white/80 justify-between items-center text-sm border-b border-white/5'>
       
       {/* Contact Info Side */}
       <div className="flex items-center gap-2 font-medium tracking-wide">
-        <IoCallOutline className="text-blue-400" />
+        <IoCallOutline className="text-brand-orange" />
         <span className="text-white/60">Customer Care:</span>
-        <a href="tel:+254793888552" className="hover:text-blue-400 transition-colors">
+        <a href="tel:+254793888552" className="hover:text-brand-orange transition-colors">
           +(254) 793 888 552
         </a>
       </div>
       <div className="flex items-center gap-2 font-medium tracking-wide">
-        <MdLocationPin  className="text-blue-400" />
+        <MdLocationPin  className="text-brand-orange" />
         <span className="text-white/60">00100:</span>
-        <a href="tel:+254793888552" className="hover:text-blue-400 transition-colors">
+        <a href="tel:+254793888552" className="hover:text-brand-orange transition-colors">
           LuckySummer,Nairobi
         </a>
       </div>
