@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Process from '../components/process'
+import WhyProcess from '../components/WhyProcess'
 
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <div className='overflow-hidden'>
      <Hero/>
      <About/>
-     <Process/>
+     <WhyProcess/>
      
 
     </div>

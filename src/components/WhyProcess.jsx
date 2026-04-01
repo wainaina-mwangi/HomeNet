@@ -1,8 +1,8 @@
 import React from 'react'
 
-const process = () => {
+const WhyProcess = () => {
   return (
-  <section className='flex justify-center align-center '>
+    <section className='flex justify-center align-center '>
    <div>
     <h3>How It Works</h3>
     <h2>Simple Process To Apply For Service</h2>
@@ -13,4 +13,4 @@ const process = () => {
   )
 }
 
-export default process
+export default WhyProcess;
