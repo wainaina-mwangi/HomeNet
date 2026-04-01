@@ -1,0 +1,63 @@
+.services-container {
+  display: flex;
+  background: linear-gradient(70deg, #3a41c6 0%, #343ab8 100%); 
+  padding: 50px 0;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  color: white;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  opacity: 0.8;
+}
+
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  margin-bottom: 12px;
+}
+
+
+.service-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%; 
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-wrap: wrap;
+  }
+  .service-card {
+    flex: 0 0 50%;
+    padding: 20px 0;
+  }
+  .service-card:nth-child(2n)::after {
+    display: none;
+  }
+}

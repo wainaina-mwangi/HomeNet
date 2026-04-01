@@ -7,6 +7,7 @@
   --color-brand-backup: #2962ff;
   --color-brand-orange: #ff6d00;
   --color-brand-white: #ffffff;
+  --color-brand-option: #00d4ff;
 }
 
 
@@ -27,10 +28,6 @@ body {
  font-family: "Lilita One", sans-serif;
 }
 
-.dark body {
-  background-color: #020617; 
-  background-image: radial-gradient(#1e293b 1px, transparent 1px);
-}
 
 
 
@@ -59,6 +56,7 @@ body {
 
 .top-nav{
   padding: 20px 30px;
+  background:#3a41c6;
   
 }
 

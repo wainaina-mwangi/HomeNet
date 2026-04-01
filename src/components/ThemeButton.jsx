@@ -8,16 +8,15 @@ const ThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="group relative flex items-center justify-center p-2.5 rounded-xl 
+      className="group relative flex items-center justify-center p-2.5 
                  transition-all duration-500 active:scale-90 overflow-hidden
-                 /* Base / Light Mode: White with subtle brand border */
-                 bg-white border border-brand-gray/30 shadow-sm
-                 /* Dark Mode: Deep Navy Glass */
-                 dark:bg-brand-navy/40 dark:border-white/10 dark:backdrop-blur-md
-                 hover:border-brand-orange/50 hover:shadow-lg focus:outline-none"
+                 
+              
+               Dark Mode: Deep Navy Glass 
+                 
+                 hover:border-brand-orange/50 focus:outline-none"
       aria-label="Toggle Theme"
     >
-      {/* Background Hover Glow - Using brand-orange gradient */}
       <span className="absolute inset-0 z-0 bg-gradient-to-tr from-brand-orange/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
       <div className="relative z-10 flex items-center justify-center transition-all duration-700">
