@@ -4,16 +4,15 @@
   align-items: center;
   background-color: #3b3ec7;
   color: #ffffff;
-  padding: 2.5rem;
+  padding: 1.5rem; 
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   height: 100%;
-  width: 90%;
-  margin-left: 18px;
-  padding-bottom: 20px;
-  /* margin-bottom: -100px; */
+  width: 90%; 
+  margin: 0 auto; 
+  box-sizing: border-box;
 }
 
 
@@ -127,4 +126,66 @@
 
 .cta-button:active {
   transform: scale(0.95);
+}
+
+
+
+@media (min-width: 768px) {
+  .pricing-card {
+    padding: 1.5rem;
+  }
+}
+
+.speed-display {
+  font-size: 1.5rem; 
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .speed-display {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cta-button {
+  width: 80%; 
+  background-color: #FF6630;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .cta-button {
+    width: 80%; 
+  }
+
+  .price-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+}
+
+
+.progress-container {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .progress-container {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+  }
 }

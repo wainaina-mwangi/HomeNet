@@ -1,39 +1,90 @@
 import React from "react";
-import image_7 from "../../src/assets/IMAGE_7.jpg";
-import { Link } from "react-router-dom";
-import { GoPaperAirplane } from "react-icons/go";
+import { motion } from "framer-motion";
+import "./WhyProcess.css";
+import image_7 from "../assets/IMAGE_7.jpg";
+
+const steps = [
+  {
+    number: "1",
+    title: "Check Coverage Availability",
+    desc: "Verify if our high-speed fiber or wireless network has reached your neighborhood.",
+  },
+  {
+    number: "2",
+    title: "Survey Location",
+    desc: "Our technical team visits your site to determine the best entry points for maximum signal.",
+  },
+  {
+    number: "3",
+    title: "Apply Contract",
+    desc: "Choose your preferred package and sign a transparent agreement with no hidden costs.",
+  },
+  {
+    number: "4",
+    title: "Installation",
+    desc: "Sit back as our experts set up your connection, ensuring you are online within hours.",
+  },
+];
 
 const WhyProcess = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: 20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <section className="w-full overflow-hidden">
-      
-      <div 
-        className="relative min-h-[70vh] md:min-h-[80vh] w-full bg-fixed bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${image_7})` }}
+    <section className="process-section p-0 overflow-hidden">
+      <div
+        className="relative min-h-[100vh] w-full bg-fixed bg-cover bg-center flex items-center justify-center py-20"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${image_7})`,
+        }}
       >
-        
-        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-20 max-w-7xl">
-          <h1 className="text-3xl sm:text-5xl md:text-5xl font-black text-white tracking-tighter leading-tight mb-6">
-            A Simple, Reliable and Affordable <br className="hidden sm:block" />
-            <span className="text-brand-orange">
-              Unlimited Internet Access
-            </span>
-          </h1>
-
-          <p className="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mb-10 opacity-90">
-            We prioritize a "plug-and-play" experience that eliminates technical
-            hurdles. By stripping away hidden fees, we make high-speed, infinite
-            connectivity a reality for every home.
-          </p>
-
-          <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4 w-full">
-            <Link
-              to="/plans"
-              className="btn flex justify-center items-center gap-2 bg-brand-orange hover:bg-brand-orange/70 text-white font-bold py-4 px-12 rounded-2xl transition-all active:scale-95 w-full sm:w-auto"
-            >
-              View Our Plans <GoPaperAirplane />
-            </Link>
+        <div className="process-container relative z-10">
+          <div className="process-left">
+            <span className="process-subtitle">HOW IT WORKS</span>
+            <h2 className="process-title text-white">
+              Simple Process to <br /> Get You Connected.
+            </h2>
+            <p className="process-description text-slate-200">
+              We’ve streamlined our onboarding to get you from zero to
+              high-speed internet in record time. Our team handles the heavy
+              lifting.
+            </p>
           </div>
+
+          <motion.div
+            className="process-right-card"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                className="step-item"
+                variants={itemVariants}
+              >
+                <div className="step-number-box">
+                  <span className="step-label">STEP</span>
+                  <div className="step-circle">{step.number}</div>
+                </div>
+                <div className="step-content">
+                  <h3 className="text-white">{step.title}</h3>
+                  <p className="text-white/70">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
