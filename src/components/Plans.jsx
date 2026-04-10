@@ -8,21 +8,36 @@ const plansData = [
     type: "BASIC PACKAGE",
     speed: "5",
     iconPercentage: 5,
-    features: ["Speed Up to 5 Mbps", "Free Fair Usage Policy (FUP)", "WiFi Fiber Modem", "IP Dynamic Private"],
+    features: [
+      "Speed Up to 5 Mbps",
+      "Free Fair Usage Policy (FUP)",
+      "WiFi Fiber Modem",
+      "IP Dynamic Private",
+    ],
     price: "1000",
   },
   {
     type: "PREMIUM PACKAGE",
     speed: "10",
     iconPercentage: 10,
-    features: ["Speed Up to 10 Mbps", "Free Fair Usage Policy (FUP)", "WiFi Fiber Modem", "IP Dynamic Private"],
+    features: [
+      "Speed Up to 10 Mbps",
+      "Free Fair Usage Policy (FUP)",
+      "WiFi Fiber Modem",
+      "IP Dynamic Private",
+    ],
     price: "1800",
   },
   {
     type: "HYPE PACKAGE",
     speed: "30",
     iconPercentage: 30,
-    features: ["Speed Up to 30 Mbps", "Free Fair Usage Policy (FUP)", "WiFi Fiber Modem", "IP Dynamic Private"],
+    features: [
+      "Speed Up to 30 Mbps",
+      "Free Fair Usage Policy (FUP)",
+      "WiFi Fiber Modem",
+      "IP Dynamic Private",
+    ],
     price: "4500",
   },
 ];
@@ -30,7 +45,11 @@ const plansData = [
 const Plans = () => {
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const containerVariants = {
@@ -40,13 +59,16 @@ const Plans = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   return (
     <section className="plans-section">
       <div className="plans-container">
-        
         <motion.div
           className="plans-header"
           initial="hidden"
@@ -71,7 +93,11 @@ const Plans = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {plansData.map((plan, index) => (
-            <motion.div key={index} variants={cardVariants} className="grid-item">
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="grid-item"
+            >
               <PricingCard plan={plan} />
             </motion.div>
           ))}
@@ -84,7 +110,7 @@ const Plans = () => {
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
         >
-          100% money-back guarantee for your first 30 days.
+          100% service Delivery.
         </motion.p>
       </div>
     </section>
