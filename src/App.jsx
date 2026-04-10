@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider }from "./pages/ThemeContext";
 import Home from "./pages/Home";
+import Plans from "./components/Plans";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/'  element={<Home/>}/>
         <Route path='/about'  element={<About/>}/>
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/plans" element={<Plans />} />
 
         
       </Routes>

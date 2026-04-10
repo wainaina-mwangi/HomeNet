@@ -13,7 +13,7 @@ const ServicesBar = () => {
   ];
 
   return (
-    <section className="services-container">
+    <section className="services-container font-sans" >
       {services.map((service) => (
         <div key={service.id} className="service-card">
           <div className="service-icon">{service.icon}</div>
