@@ -31,7 +31,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid #ccc;
-
+  background-color: aliceblue;
   outline: none;
   min-width: 250px;
 }

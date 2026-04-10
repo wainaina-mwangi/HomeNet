@@ -1,16 +1,45 @@
-import React from 'react'
+import React from "react";
+import image_4 from "../../src/assets/IMAGE_4.png";
+import { Link } from "react-router-dom";
+import { GoPaperAirplane } from "react-icons/go";
 
 const WhyProcess = () => {
   return (
-    <section className='flex justify-center align-center '>
-   <div>
-    <h3>How It Works</h3>
-    <h2>Simple Process To Apply For Service</h2>
-    <p></p>
-    {/* <img  src={} alt=''/> */}
-   </div>
-  </section>
-  )
-}
+    <section className="w-full overflow-hidden">
+      <div className="relative min-h-[60vh] sm:h-[70vh] md:h-[80vh] fixed w-full">
+        <img
+          src={image_4}
+          className="absolute inset-0 h-full w-full object-cover brightness-[0.4]"
+          alt="Ultra-Fast Internet"
+        />
+
+        <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 py-12 min-h-[60vh] sm:h-full">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter leading-tight mb-4">
+            A Simple, Reliable and Affordable <br className="hidden sm:block" />
+            <span className="text-brand-orange">
+              {" "}
+              Unlimited Internet Access
+            </span>
+          </h1>
+
+          <p className="text-slate-200 text-base  sm:text-lg md:text-xl max-w-2xl mb-8 opacity-90">
+            We prioritize a "plug-and-play" experience that eliminates technical
+            hurdles. By stripping away hidden fees, we make high-speed, infinite
+            connectivity a reality for every home.
+          </p>
+
+          <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4 w-full">
+            <Link
+              to="/plans"
+              className="btn flex justify-center items-center gap-2 bg-brand-orange hover:bg-brand-orange/70 text-white font-bold py-4 px-10 rounded-2xl transition-all active:scale-95 w-full sm:w-auto"
+            >
+              View Our Plans <GoPaperAirplane />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default WhyProcess;
