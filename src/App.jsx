@@ -26,7 +26,7 @@ const App = () => {
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/plans" element={<Plans />} />
         </Routes>
-        <ToastContainer  position="bottom-right" />
+        <ToastContainer  position="top-center" />
          </ThemeProvider>
       </div>
    

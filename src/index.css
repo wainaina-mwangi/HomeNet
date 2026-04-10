@@ -10,10 +10,10 @@
   --color-brand-option: #00d4ff;
 }
 
-.Toastify__toast-container {
-  z-index: 9999;
+/* .Toastify__toast-container {
+  z-index: 9999!importatnt; 
   position: fixed; 
-}
+} */
 
 
 
