@@ -1,6 +1,7 @@
 // import IMAGE_5 from "../assets/IMAGE_5";
 import image_5 from "../assets/IMAGE_5.png";
 import "./About.css";
+import {Link} from "react-router-dom"
 
 const About = () => {
   return (
@@ -15,7 +16,7 @@ const About = () => {
             to your needs. We pride ourselves on offering competitive prices and
             exceptional, 24/7 support.
           </p>
-          <button className="cta-button">Sign Up Now</button>
+          <Link to="/plans" className=" btn font-bold bg-brand-orange hover:bg-brand-orange/70 text-white">Sign Up Now</Link>
         </div>
 
         <div className="about-image">

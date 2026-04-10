@@ -2,8 +2,19 @@ import React from "react";
 import { MdArrowCircleLeft } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./NotFound.css";
+import { MdEmail } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
 
-const NotFoundPage = () => {
+function NotFoundPage() {
+  const [email, setEmail] = useState("");
+  const notify = (e) => {
+    e.preventDefault();
+
+    toast.success("Successfully Signed Up!");
+    setEmail("");
+  };
+
   return (
     <main className=" bg  min-h-[80vh] w-full flex flex-col items-center justify-center bg-brand-navy p-6 font-sans">
       <div className=" found max-w-xl sm:max-w-sm w-full flex flex-col items-center text-center bg-brand-backup">
@@ -25,11 +36,31 @@ const NotFoundPage = () => {
           to="/"
           className="btn flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/70 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95"
         >
-            <MdArrowCircleLeft  size={25}/> Back Home 
+          <MdArrowCircleLeft size={25} /> Back Home
         </Link>
+      </div>
+      <div className="under w-full ">
+        <p className="font-bold text-2xl text-white">
+          Get exclusive deals by signing up to our Newsletter
+        </p>
+        <div className="gap-2 flex  justify-between">
+          <input
+            type="email"
+            placeholder="Email"
+            className="input"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button className="bg-brand-orange" onClick={notify}>
+            {" "}
+            <MdEmail className=" icon-logo" /> sign Up
+            <ToastContainer />
+          </button>
+        </div>
       </div>
     </main>
   );
-};
+}
 
 export default NotFoundPage;

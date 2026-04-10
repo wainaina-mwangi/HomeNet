@@ -14,15 +14,107 @@
     
 }
 
+.under {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 2rem;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.under .input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+  outline: none;
+  min-width: 250px;
+}
+
+.under button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.under button:hover {
+  opacity: 0.9;
+}
+
+.icon-logo{
+  font-size: 15px;
+}
+
+
+.under .input::placeholder {
+  color: #999999;     
+  font-style: italic;       
+  font-size: 0.9rem;        
+  opacity: 1;               
+}
+
+
+.under .input:focus::placeholder {
+  color: transparent;      
+}
+
+
+@media (max-width: 768px) {
+  .under {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 
 
 
 @media (max-width: 480px){
  .bg{
     min-height: 60vh;
+    padding:30px;
     
 
  }
+
+ .under {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 2rem;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.under .input {
+  padding: 6px 10px;
+  min-width: 150px;
+}
+
+.under button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  width: fit-content;
+  
+}
 
  .found{
   border-radius: 5px;

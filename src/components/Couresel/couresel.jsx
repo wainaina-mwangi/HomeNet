@@ -35,7 +35,7 @@ const Couresel = () => {
         className="main-carousel"
       >
         {/* --- SLIDE 1 --- */}
-       {/* --- SLIDE 1: SPEED --- */}
+    
         <div className="relative h-100 sm:h-125 md:h-150">
           <img src={image_4} className="h-full w-full object-cover" alt="Ultra-Fast Internet" />
           <motion.div
@@ -60,7 +60,7 @@ const Couresel = () => {
         </div>
 
         {/* --- SLIDE 2 --- */}
-        {/* --- SLIDE 2: RELIABILITY --- */}
+        
         <div className="relative h-100 sm:h-125 md:h-150">
           <img src={image_2} className="h-full w-full object-cover" alt="Reliable Connection" />
           <motion.div
@@ -82,7 +82,7 @@ const Couresel = () => {
         </div>
 
         {/* --- SLIDE 3 --- */}
-        {/* --- SLIDE 3: LOCAL SUPPORT --- */}
+        
         <div className="relative h-100 sm:h-125 md:h-150">
           <img src={image_1} className="h-full w-full object-cover" alt="Nairobi Local Support" />
           <motion.div

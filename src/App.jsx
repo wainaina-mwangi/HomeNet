@@ -4,7 +4,9 @@ import Navbar from "./components/Navbar";
 import TopNavbar from "./components/TopNavbar";
 import About from "./components/About";
 import NotFoundPage from "./components/NotFoundPage";
-
+// import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider }from "./pages/ThemeContext";
 import Home from "./pages/Home";
@@ -22,6 +24,8 @@ const App = () => {
 
         
       </Routes>
+
+      <ToastContainer />
       </ThemeProvider>
     </div>
   );
