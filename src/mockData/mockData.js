@@ -1,49 +1,48 @@
 export const NavbarMenu = [
-    {
-        id:1,
-        title: "Home",
-        link : "/"
-    },
+  {
+    id: 1,
+    title: "Home",
+    link: "/",
+  },
 
-     {
-        id:2,
-        title: "Why HomeNet",
-        link : "/about"
-    },
+  {
+    id: 2,
+    title: "Why HomeNet",
+    link: "/about",
+  },
 
-    {
-        id:3,
-        title: "Plans",
-        link : "/plans"
-    },
+  {
+    id: 3,
+    title: "Plans",
+    link: "/plans",
+  },
 
+  {
+    id: 4,
+    title: "Availability",
+    link: "/availability",
+  },
 
-    {
-        id:4,
-        title: "Coverage",
-        link : "/coverage"
-    },
+  {
+    id: 5,
+    title: "support",
+    link: "/support",
+  },
 
-    {
-        id:5,
-        title: "support",
-        link : "/support"
-    },
+  {
+    id: 6,
+    title: "FAQS",
+    link: "faqs",
+  },
+  {
+    id: 7,
+    title: "Community",
+    link: "community",
+  },
 
-    {
-        id:6,
-        title: "FAQS",
-        link : "faqs"
-    },
-    {
-        id:7,
-        title: "Community",
-        link : "community"
-    },
-
-    {
-        id:8,
-        title: "Contact",
-        link : "contact"
-    },
-]
+  {
+    id: 8,
+    title: "Contact",
+    link: "contact",
+  },
+];
