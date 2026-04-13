@@ -23,7 +23,7 @@ const Couresel = () => {
   };
 
   return (
-    <div className="carousel-wrapper w-full relative overflow-hidden  mx-4 md:mx-auto  mt-6 md:mt-10">
+    <div className="carousel-wrapper hero-wrapper w-full relative overflow-hidden h-[65vh]  mx-4 md:mx-auto  mt-6 md:mt-10">
       <Carousel
         autoPlay
         infiniteLoop

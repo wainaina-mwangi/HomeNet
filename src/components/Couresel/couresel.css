@@ -1,0 +1,10 @@
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    height: 100vh; 
+  }
+  
+  .hero-title {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+}
