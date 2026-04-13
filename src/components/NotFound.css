@@ -143,3 +143,12 @@
 
    
 }
+
+
+@media (min-width: 1024px) {
+  .bg{
+    margin-top: 30px;
+    
+
+ }
+}
