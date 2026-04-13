@@ -14,6 +14,7 @@ import Plans from "./components/Plans";
 import { useState, useEffect, Suspense } from "react";
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
+import CoverageChecker from "./components/CoverageChecker";
 
 const App = () => {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFoundPage />} />
             <Route path="/plans" element={<Plans />} />
+            <Route path="/CoverageChecker" element={<CoverageChecker />} />
           </Routes>
         </Suspense>
       </ThemeProvider>

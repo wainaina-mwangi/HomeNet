@@ -20,7 +20,7 @@ export const NavbarMenu = [
   {
     id: 4,
     title: "Availability",
-    link: "/availability",
+    link: "/CoverageChecker",
   },
 
   {
