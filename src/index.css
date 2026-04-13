@@ -56,17 +56,41 @@ body {
 
 .btn{
     /* background: rgba(21, 214, 221, 0.308); */
-    color: #ffff;
+    /* color: #ffff;
     padding: 10px 20px;
     border-radius: 20px;
     /* border:2px solid rgb(44, 151, 212); */
-    transition: ease-in-out .5s;
+    /* transition: ease-in-out .5s;
     margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width:fit-content;
+    width:fit-content;  */
+    box-shadow: 3px 4px 0px 0px #1564ad;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:5px;
+	border:1px solid #337bc4;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width:fit-content; 
 
+}
+
+.btn:hover{
+  background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
 }
 
 

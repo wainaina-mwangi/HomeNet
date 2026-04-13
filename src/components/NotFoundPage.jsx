@@ -52,7 +52,7 @@ function NotFoundPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="bg-brand-orange" onClick={notify}>
+          <button className="notFound" onClick={notify}>
             {" "}
             <MdEmail className=" icon-logo" /> sign Up
             <ToastContainer />
