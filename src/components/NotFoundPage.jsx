@@ -55,7 +55,7 @@ function NotFoundPage() {
           <button className="notFound" onClick={notify}>
             {" "}
             <MdEmail className=" icon-logo" /> sign Up
-            <ToastContainer />
+            <ToastContainer position="top-center" />
           </button>
         </div>
       </div>
