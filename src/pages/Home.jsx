@@ -6,6 +6,8 @@ import Services from '../components/Services'
 import Plans from "../components/Plans"
 import Availability from '../components/CoverageChecker'
 
+import FaqSection from "../components/Faq/FaqSection";
+
 
 const Home = () => {
   return (
@@ -16,7 +18,7 @@ const Home = () => {
      <WhyProcess/>
      <Plans/>
      <Availability/>
-     
+     <FaqSection />
 
     </div>
   )

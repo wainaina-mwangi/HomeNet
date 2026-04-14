@@ -15,6 +15,8 @@ import { useState, useEffect, Suspense } from "react";
 import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 import CoverageChecker from "./components/CoverageChecker";
+import FaqSection from "./components/Faq/FaqSection";
+
 
 const App = () => {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -35,6 +37,7 @@ const App = () => {
       <ToastContainer position="top-center" reverseOrder={false} />
       <ThemeProvider>
         <ScrollToTop />
+        
         <TopNavbar />
         <Navbar />
         <Suspense fallback={<Loader />}>
@@ -44,6 +47,8 @@ const App = () => {
             <Route path="*" element={<NotFoundPage />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/CoverageChecker" element={<CoverageChecker />} />
+            <Route path="/FaqSection" element={ <FaqSection />} />
+          
           </Routes>
         </Suspense>
       </ThemeProvider>

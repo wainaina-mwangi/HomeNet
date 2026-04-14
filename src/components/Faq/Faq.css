@@ -1,0 +1,79 @@
+
+
+.faq-section {
+  padding: 6rem 1.5rem;
+  position: relative;
+  background: #1A237E; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+
+.faq-container {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+.faq-title .highlight {
+  color: #FF6D00; 
+}
+
+.faq-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+
+.faq-glass-card {
+  width: 100%;
+  padding: 30px 50px;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #033297;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+  margin:20px;
+}
+
+
+.dark .faq-glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2.2rem;
+  }
+  
+  .faq-section {
+    padding: 4rem 1rem;
+  }
+}

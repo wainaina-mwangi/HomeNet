@@ -3,10 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { GoPaperAirplane } from "react-icons/go";
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import image_4 from "../../assets/IMAGE_4.png";
 import image_1 from "../../assets/IMAGE_1.png";
 import image_2 from "../../assets/IMAGE_2.png";
-import { Link } from "react-router-dom";
 
 const Couresel = () => {
   const fadeInUp = {
@@ -23,20 +23,48 @@ const Couresel = () => {
   };
 
   return (
-    <div className="carousel-wrapper hero-wrapper w-full relative overflow-hidden   mx-4 md:mx-auto  mt-6 md:mt-5">
+    <div className="carousel-wrapper hero-wrapper w-full relative overflow-hidden mx-4 md:mx-auto mt-6 md:mt-5">
+      
+      <style>{`
+        .main-carousel .control-dots {
+          bottom: 25px !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          gap: 12px;
+          margin: 0 !important;
+          width: 100%;
+         
+        }
+      `}</style>
+
       <Carousel
         autoPlay
         infiniteLoop
-        showIndicators={true}
         showStatus={false}
         showThumbs={false}
         interval={5000}
         stopOnHover={false}
         className="main-carousel"
+        renderIndicator={(onClickHandler, isSelected, index, label) => (
+          <li
+            className={`transition-all duration-300 ease-in-out cursor-pointer rounded-full ${
+              isSelected 
+                ? "w-10 h-3 bg-brand-orange" 
+                : "w-3 h-3 bg-white/40 hover:bg-white/70"
+            }`}
+            onClick={onClickHandler}
+            onKeyDown={onClickHandler}
+            value={index}
+            key={index}
+            role="button"
+            tabIndex={0}
+            aria-label={`${label} ${index + 1}`}
+          />
+        )}
       >
-        {/* --- SLIDE 1 --- */}
-
-        <div className="relative h-100 sm:h-125 md:h-150">
+        {/* --- SLIDE 1: ULTRA-FAST --- */}
+        <div className="relative h-[400px] sm:h-[500px] md:h-[600px]">
           <img
             src={image_4}
             className="h-full w-full object-cover"
@@ -52,7 +80,7 @@ const Couresel = () => {
               variants={fadeInUp}
               className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-4"
             >
-              Ultra-Fast Internet that <br />{" "}
+              Ultra-Fast Internet that <br />
               <span className="text-brand-orange">feels like Home</span>
             </motion.h1>
             <motion.p
@@ -65,13 +93,13 @@ const Couresel = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/plans"
-                className="btn flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/70 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95 "
+                className="btn flex items-center gap-2 bg-brand-orange hover:bg-brand-orange/70 text-white font-bold py-3 px-8 rounded-2xl transition-all active:scale-95"
               >
                 View Our Plans <GoPaperAirplane />
               </Link>
               <Link
                 to="/contact"
-                className="btn flex items-center gap-2 bg-white/10 hover:bg-white/20  text-white border border-white/30 font-bold py-3 px-8 rounded-2xl transition-all active:scale-95"
+                className="btn flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold py-3 px-8 rounded-2xl transition-all active:scale-95"
               >
                 Check Coverage
               </Link>
@@ -79,9 +107,8 @@ const Couresel = () => {
           </motion.div>
         </div>
 
-        {/* --- SLIDE 2 --- */}
-
-        <div className="relative h-100 sm:h-125 md:h-150">
+        {/* --- SLIDE 2: WORK & STREAM --- */}
+        <div className="relative h-[400px] sm:h-[500px] md:h-[600px]">
           <img
             src={image_2}
             className="h-full w-full object-cover"
@@ -118,9 +145,8 @@ const Couresel = () => {
           </motion.div>
         </div>
 
-        {/* --- SLIDE 3 --- */}
-
-        <div className="relative h-100 sm:h-125 md:h-150">
+        {/* --- SLIDE 3: NAIROBI LOCAL --- */}
+        <div className="relative h-[400px] sm:h-[500px] md:h-[600px]">
           <img
             src={image_1}
             className="h-full w-full object-cover"

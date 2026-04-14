@@ -32,7 +32,7 @@ export const NavbarMenu = [
   {
     id: 6,
     title: "FAQS",
-    link: "faqs",
+    link: "FaqSection ",
   },
   {
     id: 7,
