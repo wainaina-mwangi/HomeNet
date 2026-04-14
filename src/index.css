@@ -107,11 +107,18 @@ body {
   
 }
 
-.social_link li{
+.social_link li {
   background-color: #033297;
+  list-style: none;
+   border-radius: 3px;
+}
+
+.social_link li a {
   color: #FF6D00;
-  
-  
+  padding: 6px 10px;
+  display: block;
+  text-decoration: none;
+ 
 }
 
 
