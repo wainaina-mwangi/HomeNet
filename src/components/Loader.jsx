@@ -6,7 +6,7 @@ const Loader = () => (
     <HashLoader color="#d6671c" size={80} speedMultiplier={1.2} />
     <br />
     <p className="loader  text-white font-semibold animate-pulse">
-      Connecting to homeNet...
+      Connecting to HomeNet...
     </p>
   </div>
 );
