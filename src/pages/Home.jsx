@@ -12,7 +12,7 @@ const Home = () => {
     <div className='overflow-hidden'>
      <Hero/>
      <Services/>
-     <About/>
+     <About />
      <WhyProcess/>
      <Plans/>
      <Availability/>

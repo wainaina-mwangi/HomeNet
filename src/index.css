@@ -10,6 +10,28 @@
   --color-brand-option: #00d4ff;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body {
+  background-color: #f8fafc; 
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 40px 40px;
+ font-family: "Lilita One", sans-serif;
+}
+
+
 .Toastify__toast-container {
   z-index: 9999!important; 
   position: fixed; 
@@ -27,23 +49,6 @@
   background-color: #ffffff;
 }
 
-
-
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-
-
-body {
-  background-color: #f8fafc; 
-  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-  background-size: 40px 40px;
- font-family: "Lilita One", sans-serif;
-}
 
 
 
@@ -103,8 +108,9 @@ body {
 }
 
 .social_link li{
-  /* background-color: #033297; */
+  background-color: #033297;
   color: #FF6D00;
+  
   
 }
 
