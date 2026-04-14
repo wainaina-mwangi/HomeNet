@@ -16,6 +16,7 @@ import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 import CoverageChecker from "./components/CoverageChecker";
 import FaqSection from "./components/Faq/FaqSection";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -33,11 +34,10 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-brand-option transition-colors duration-300">
+    <div>
       <ToastContainer position="top-center" reverseOrder={false} />
       <ThemeProvider>
         <ScrollToTop />
-        
         <TopNavbar />
         <Navbar />
         <Suspense fallback={<Loader />}>
@@ -48,10 +48,12 @@ const App = () => {
             <Route path="/plans" element={<Plans />} />
             <Route path="/CoverageChecker" element={<CoverageChecker />} />
             <Route path="/FaqSection" element={ <FaqSection />} />
-          
           </Routes>
         </Suspense>
+        <Footer>
+        </Footer>
       </ThemeProvider>
+      
     </div>
   );
 };
