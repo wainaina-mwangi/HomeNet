@@ -20,6 +20,7 @@ const CoverageChecker = () => {
     "Sarakasi",
     "Glucola",
     "Mugure",
+    "ngomongo"
   ];
 
   const checkCoverage = (e) => {

@@ -44,7 +44,7 @@
 .faq-glass-card {
   width: 100%;
   padding: 30px 50px;
-  border-radius: 1.5rem;
+  border-radius: 10PX;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);

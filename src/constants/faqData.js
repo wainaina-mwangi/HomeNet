@@ -1,7 +1,7 @@
 export const faqData = [
   {
     id: 1,
-    question: "How fast is homeNet installation?",
+    question: "How fast is HomeNet installation?",
     answer: "We pride ourselves on speed. Once you've selected a plan, our Nairobi-based technical team typically completes installation within 24 hours."
   },
   {
