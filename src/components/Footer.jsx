@@ -1,135 +1,167 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import { motion } from "framer-motion";
 import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 import {
   FaSquarePhone,
-  FaSquareWhatsapp,
   FaLocationDot,
+  FaEnvelope,
+  FaChevronRight,
 } from "react-icons/fa6";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [email, setEmail] = useState("");
   const currentYear = new Date().getFullYear();
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-  const handleSubmit = (event) => {
+  const notify = (event) => {
     event.preventDefault();
     if (email.trim() === "") return;
-    alert("You have successfully subscribed!");
+    toast.success("Subscribed to HomeNet!");
     setEmail("");
   };
 
   return (
-    <footer className="custom-footer">
-      <div className="footer-bg-glow"></div>
+    <footer className="homenet-footer">
+      <div className="footer-contact-strip">
+        <div className="strip-container">
+          <div className="contact-info-left">
+            <span>
+              <FaEnvelope /> info@homenet.com
+            </span>
+            <span>
+              <FaLocationDot /> Lucky Summer, Nairobi, KE
+            </span>
+          </div>
+          <div className="social-icons-right">
+            <a href="#">
+              <BsFacebook />
+            </a>
+            <a href="#">
+              <BsTwitter />
+            </a>
+            <a href="#">
+              <BsInstagram />
+            </a>
+            <a href="#">
+              <BsGithub />
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <motion.div
-        className="footer-container"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={staggerContainer}
-      >
-        <div className="footer-top">
-          <motion.div className="footer-brand-section" variants={fadeInUp}>
+      <div className="footer-main-container">
+        <div className="footer-middle-row">
+          <div className="brand-logo-area">
             <h2 className="footer-logo">
-              Home<span>Net.</span>
+              Home
+              <span className="text-brand-orange">Net</span>
             </h2>
-            <p>
-              Bringing high-speed connectivity to your doorstep with reliability
-              and style.
-            </p>
-            <div className="social-links">
-              {[BsFacebook, BsInstagram, BsTwitter].map((Icon, i) => (
-                <motion.a
-                  key={i}
-                  href="#"
-                  whileHover={{ y: -5, scale: 1.2, color: "#35ce4e" }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Icon />
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
+          </div>
 
-          <motion.div className="footer-links-grid" variants={fadeInUp}>
-            <div className="link-group">
-              <h3>Useful Links</h3>
-              <ul>
-                {["About", "Why HomeNet", "Plans", "FAQs"].map((link) => (
-                  <motion.li key={link} whileHover={{ x: 7 }}>
-                    <a href={`#${link.replace(/\s/g, "")}`}>{link}</a>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            <div className="link-group">
-              <h3>Support</h3>
-              <div className="contact-info">
-                <p>
-                  <FaSquarePhone className="icon" /> +254 793 888 552
-                </p>
-                <p>
-                  <FaSquareWhatsapp className="icon" /> +254 742 651 520
-                </p>
-                <p>
-                  <FaLocationDot className="icon" /> Lucky Summer, Nairobi
-                </p>
+          <div className="subscription-box">
+            <form onSubmit={notify}>
+              <div className="input-group">
+                <FaEnvelope className="input-icon" />
+                <input
+                  type="email"
+                  placeholder="Enter Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <button type="submit">Subscribe Now</button>
               </div>
-            </div>
-          </motion.div>
-
-          <motion.div className="footer-newsletter" variants={fadeInUp}>
-            <h3>Stay Updated</h3>
-            <p>Subscribe for exclusive coverage updates.</p>
-            <form className="newsletter-form" onSubmit={handleSubmit}>
-              <input
-                type="email"
-                placeholder="Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <motion.button
-                type="submit"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 0px 15px rgba(235, 150, 93, 0.5)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Join
-              </motion.button>
             </form>
-          </motion.div>
+          </div>
+
+          <div className="emergency-call">
+            <div className="call-icon-circle">
+              <FaSquarePhone />
+            </div>
+            <div className="call-text">
+              <small>Call Support</small>
+              <strong>+254 793 888 552</strong>
+            </div>
+          </div>
         </div>
 
-        <motion.div className="footer-bottom" variants={fadeInUp}>
-          <p>&copy; {currentYear} HomeNet Inc. All rights reserved.</p>
-          <div className="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+        <hr className="footer-divider" />
+
+        <div className="footer-bottom-grid">
+          <div className="footer-col">
+            <h3>About HomeNet</h3>
+            <p>
+              Providing high-speed residential WiFi and digital logistics
+              solutions across Nairobi with 99.9% uptime.
+            </p>
+            <Link to="/contact" className="get-touch-btn">
+              Get In Touch <FaChevronRight size={12} />
+            </Link>
           </div>
-        </motion.div>
-      </motion.div>
+
+          <div className="footer-col">
+            <h3>Our Services</h3>
+            <ul>
+              <li>Blazing Speeds</li>
+              <li>Neflix</li>
+              <li>Smart Connectivity</li>
+              <li>24/7 Support</li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="#about">About Us</a>
+              </li>
+              <li>
+                <a href="#plans">Our Plans</a>
+              </li>
+              <li>
+                <a href="#faqs">FAQs</a>
+              </li>
+              <li>
+                <a href="#contact">Contacts</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h3>Our Gallery</h3>
+            <div className="gallery-grid">
+              <div
+                className="gallery-item"
+                style={{ background: "#333" }}
+              ></div>
+              <div
+                className="gallery-item"
+                style={{ background: "#444" }}
+              ></div>
+              <div
+                className="gallery-item"
+                style={{ background: "#555" }}
+              ></div>
+              <div
+                className="gallery-item"
+                style={{ background: "#222" }}
+              ></div>
+              <div
+                className="gallery-item"
+                style={{ background: "#666" }}
+              ></div>
+              <div
+                className="gallery-item"
+                style={{ background: "#777" }}
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-copyright">
+          <p>© Copyright {currentYear} by HomeNet. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
   );
 }
