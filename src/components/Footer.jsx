@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import { motion } from "framer-motion"; // Import motion
+import { motion } from "framer-motion";
 import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 import {
   FaSquarePhone,
@@ -15,6 +15,16 @@ function Footer() {
   const [email, setEmail] = useState("");
   const currentYear = new Date().getFullYear();
 
+  
+  const galleryImages = [
+    "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=300&q=80", // Server/Network
+    "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=300&q=80", // Fiber Optics
+    "https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?auto=format&fit=crop&w=300&q=80", // Modern Router
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80", // Tech Circuit
+    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=300&q=80", // Cybersecurity/Data
+    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80", // Digital Globe
+  ];
+
   const notify = (event) => {
     event.preventDefault();
     if (email.trim() === "") return;
@@ -22,14 +32,11 @@ function Footer() {
     setEmail("");
   };
 
-  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15, // Delay between each element appearing
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
@@ -44,7 +51,6 @@ function Footer() {
 
   return (
     <footer className="homenet-footer">
-      {/* 1. Top Strip - Slides in from the left */}
       <motion.div
         className="footer-contact-strip"
         initial={{ x: "-100%" }}
@@ -53,12 +59,8 @@ function Footer() {
       >
         <div className="strip-container">
           <div className="contact-info-left">
-            <span>
-              <FaEnvelope /> info@homenet.com
-            </span>
-            <span>
-              <FaLocationDot /> Lucky Summer, Nairobi, KE
-            </span>
+            <span><FaEnvelope /> info@homenet.com</span>
+            <span><FaLocationDot /> Lucky Summer, Nairobi, KE</span>
           </div>
           <div className="social-icons-right">
             {[BsFacebook, BsTwitter, BsInstagram, BsGithub].map((Icon, idx) => (
@@ -76,7 +78,6 @@ function Footer() {
       </motion.div>
 
       <div className="footer-main-container">
-        {/* 2. Middle Row */}
         <div className="footer-middle-row">
           <motion.div
             className="brand-logo-area"
@@ -127,7 +128,6 @@ function Footer() {
 
         <hr className="footer-divider" />
 
-        {/* 3. Bottom Grid - Staggered animations */}
         <motion.div
           className="footer-bottom-grid"
           variants={containerVariants}
@@ -137,10 +137,7 @@ function Footer() {
         >
           <motion.div className="footer-col" variants={itemVariants}>
             <h3>About HomeNet</h3>
-            <p>
-              Providing high-speed residential WiFi solutions across Nairobi
-              with 99.9% uptime.
-            </p>
+            <p>Providing high-speed residential WiFi solutions across Nairobi with 99.9% uptime.</p>
             <Link to="/contact">
               <motion.button className="get-touch-btn" whileHover={{ x: 5 }}>
                 Get In Touch <FaChevronRight size={12} />
@@ -151,15 +148,8 @@ function Footer() {
           <motion.div className="footer-col" variants={itemVariants}>
             <h3>Our Services</h3>
             <ul>
-              {[
-                "Blazing Speeds",
-                "Netflix",
-                "Smart Connectivity",
-                "24/7 Support",
-              ].map((item) => (
-                <motion.li key={item} whileHover={{ x: 5, color: "#eb965d" }}>
-                  {item}
-                </motion.li>
+              {["Blazing Speeds", "Netflix", "Smart Connectivity", "24/7 Support"].map((item) => (
+                <motion.li key={item} whileHover={{ x: 5, color: "#eb965d" }}>{item}</motion.li>
               ))}
             </ul>
           </motion.div>
@@ -178,12 +168,16 @@ function Footer() {
           <motion.div className="footer-col" variants={itemVariants}>
             <h3>Our Gallery</h3>
             <div className="gallery-grid">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
+              {galleryImages.map((src, i) => (
                 <motion.div
                   key={i}
                   className="gallery-item"
                   whileHover={{ scale: 1.1, zIndex: 10 }}
-                  style={{ background: `#${i}${i}${i}` }}
+                  style={{ 
+                    backgroundImage: `url(${src})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                  }}
                 />
               ))}
             </div>
