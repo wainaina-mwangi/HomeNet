@@ -48,7 +48,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #033297;
+  background: #231075;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
 }
@@ -57,7 +57,7 @@
   display: flex;
   flex-direction: column;
   gap:8px;
-  margin:20px;
+ 
 }
 
 
@@ -68,6 +68,16 @@
 }
 
 
+.faq-item{
+ margin:10px;
+  background:white;
+  /* height: 100px; */
+  padding: 10px 20px;
+  border-radius: 5px;
+
+}
+
+
 @media (max-width: 768px) {
   .faq-title {
     font-size: 2.2rem;
@@ -75,5 +85,27 @@
   
   .faq-section {
     padding: 4rem 1rem;
+    min-height: 4vh;
   }
+
+  .faq-container {
+  width: 100%;
+  max-width: 1000px;
+  
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-title {
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+  
 }
