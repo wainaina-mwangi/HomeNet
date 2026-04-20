@@ -17,7 +17,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import CoverageChecker from "./components/CoverageChecker";
 import FaqSection from "./components/Faq/FaqSection";
 import Footer from "./components/Footer";
-
+import Contact from "./pages/Contact";
+import Community from "./pages/Community";
 
 const App = () => {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -47,13 +48,13 @@ const App = () => {
             <Route path="*" element={<NotFoundPage />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/CoverageChecker" element={<CoverageChecker />} />
-            <Route path="/FaqSection" element={ <FaqSection />} />
+            <Route path="/FaqSection" element={<FaqSection />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Community" element={<Community />} />
           </Routes>
         </Suspense>
-        <Footer>
-        </Footer>
+        <Footer></Footer>
       </ThemeProvider>
-      
     </div>
   );
 };
