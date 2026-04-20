@@ -34,7 +34,6 @@ const Contact = () => {
 
   return (
     <section className="contact-page-section">
-      {/* 1. Top Section */}
       <div className="contact-hero">
         <h1 className="hero-title">Contact <span className="highlight">Us</span></h1>
         <p className="hero-subtitle">Have a question? We'd love to hear from you. Reach out via the form below, call us, or visit our school..</p>
@@ -42,8 +41,6 @@ const Contact = () => {
 
       <div className="contact-container">
         <div className="contact-main-grid">
-          
-          {/* 2. Left Side: White Email Icon */}
           <div className="contact-visual-side">
             <div className="white-icon-circle">
               <MdEmail className="hero-white-icon" />
@@ -74,8 +71,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-
-        {/* 4. Bottom Info: Address & Hours */}
         <div className="info-details-row">
           <div className="info-card">
             <FaLocationDot className="info-icon" size={50} />
@@ -95,8 +90,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* 5. Map Section */}
       <div className="map-wrapper">
         <iframe 
           title="HomeNet Location"

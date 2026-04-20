@@ -25,8 +25,8 @@ export const NavbarMenu = [
 
   {
     id: 5,
-    title: "support",
-    link: "/support",
+    title: "Speed check",
+    link: "/speedcheck",
   },
 
   {

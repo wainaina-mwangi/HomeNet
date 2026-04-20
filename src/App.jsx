@@ -19,6 +19,7 @@ import FaqSection from "./components/Faq/FaqSection";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Community from "./pages/Community";
+import SpeedCheck from "./pages/SpeedCheck";
 
 const App = () => {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -51,6 +52,7 @@ const App = () => {
             <Route path="/FaqSection" element={<FaqSection />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Community" element={<Community />} />
+            <Route path="/SpeedCheck" element={<SpeedCheck />} />
           </Routes>
         </Suspense>
         <Footer></Footer>
