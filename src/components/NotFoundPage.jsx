@@ -39,26 +39,6 @@ function NotFoundPage() {
           <MdArrowCircleLeft size={25} /> Back Home
         </Link>
       </div>
-      <div className="under w-full ">
-        <p className="font-bold text-2xl text-white">
-          Get exclusive deals by signing up to our Newsletter
-        </p>
-        <div className="gap-2 flex  justify-between">
-          <input
-            type="email"
-            placeholder="Email"
-            className="input"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button className="notFound" onClick={notify}>
-            {" "}
-            <MdEmail className=" icon-logo" /> sign Up
-            <ToastContainer position="top-center" />
-          </button>
-        </div>
-      </div>
     </main>
   );
 }

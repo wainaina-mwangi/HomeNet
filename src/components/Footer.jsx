@@ -1,29 +1,13 @@
 import React, { useState } from "react";
 import "./Footer.css";
 import { motion } from "framer-motion";
-import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
-import {
-  FaSquarePhone,
-  FaLocationDot,
-  FaEnvelope,
-  FaChevronRight,
-} from "react-icons/fa6";
+import { FaSquarePhone, FaChevronRight } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 
 function Footer() {
   const [email, setEmail] = useState("");
   const currentYear = new Date().getFullYear();
-
-  
-  const galleryImages = [
-    "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=300&q=80", // Server/Network
-    "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=300&q=80", // Fiber Optics
-    "https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?auto=format&fit=crop&w=300&q=80", // Modern Router
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80", // Tech Circuit
-    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=300&q=80", // Cybersecurity/Data
-    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=300&q=80", // Digital Globe
-  ];
 
   const notify = (event) => {
     event.preventDefault();
@@ -36,120 +20,97 @@ function Footer() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 },
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
+      opacity: 1,
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
   return (
     <footer className="homenet-footer">
-      <motion.div
-        className="footer-contact-strip"
-        initial={{ x: "-100%" }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.8, ease: "anticipate" }}
-      >
-        <div className="strip-container">
-          <div className="contact-info-left">
-            <span><FaEnvelope /> info@homenet.com</span>
-            <span><FaLocationDot /> Lucky Summer, Nairobi, KE</span>
-          </div>
-          <div className="social-icons-right">
-            {[BsFacebook, BsTwitter, BsInstagram, BsGithub].map((Icon, idx) => (
-              <motion.a
-                key={idx}
-                href="#"
-                whileHover={{ scale: 1.3, color: "#eb965d" }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon />
-              </motion.a>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      <div className="footer-main-container">
-        <div className="footer-middle-row">
-          <motion.div
-            className="brand-logo-area"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
+      <div className="footer-main-content">
+        <motion.div
+          className="footer-top-row"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="brand-section">
             <h2 className="footer-logo">
-              Home<span className="text-brand-orange">Net</span>
+              Home<span className="accent">Net</span>
             </h2>
-          </motion.div>
+            <p className="brand-tagline">Connecting Nairobi's Heartbeat.</p>
+          </div>
 
-          <motion.div
-            className="subscription-box"
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <form onSubmit={notify}>
-              <div className="input-group">
-                <FaEnvelope className="input-icon" />
-                <input
-                  type="email"
-                  placeholder="Enter Email Address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <motion.button
-                  type="submit"
-                  whileHover={{ backgroundColor: "#1d4ed8", color: "#fff" }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Subscribe Now
-                </motion.button>
-              </div>
+          <div className="subscription-section">
+            <form onSubmit={notify} className="newsletter-form">
+              <input
+                type="email"
+                placeholder="Join our newsletter"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Subscribe
+              </motion.button>
             </form>
-          </motion.div>
-
-          <motion.div className="emergency-call" whileHover={{ scale: 1.05 }}>
-            <div className="call-icon-circle">
-              <FaSquarePhone />
-            </div>
-            <div className="call-text">
-              <small>Call Support</small>
-              <strong>+254 793 888 552</strong>
-            </div>
-          </motion.div>
-        </div>
-
-        <hr className="footer-divider" />
+          </div>
+        </motion.div>
 
         <motion.div
-          className="footer-bottom-grid"
+          className="footer-grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <motion.div className="footer-col" variants={itemVariants}>
+          <motion.div className="footer-col about-col" variants={itemVariants}>
             <h3>About HomeNet</h3>
-            <p>Providing high-speed residential WiFi solutions across Nairobi with 99.9% uptime.</p>
-            <Link to="/contact">
-              <motion.button className="get-touch-btn" whileHover={{ x: 5 }}>
-                Get In Touch <FaChevronRight size={12} />
-              </motion.button>
+            <p>
+              Providing high-speed residential WiFi solutions across Nairobi
+              with 99.9% uptime. 20% of installations support local education.
+            </p>
+            <Link to="/contact" className="touch-link">
+              <motion.span
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-2"
+              >
+                Get In Touch <FaChevronRight />
+              </motion.span>
             </Link>
           </motion.div>
 
           <motion.div className="footer-col" variants={itemVariants}>
-            <h3>Our Services</h3>
+            <h3>Services</h3>
             <ul>
-              {["Blazing Speeds", "Netflix", "Smart Connectivity", "24/7 Support"].map((item) => (
-                <motion.li key={item} whileHover={{ x: 5, color: "#eb965d" }}>{item}</motion.li>
+              {[
+                "Blazing Speeds",
+                "Netflix",
+                "Smart Connectivity",
+                "24/7 Support",
+              ].map((item) => (
+                <motion.li
+                  key={item}
+                  whileHover={{ x: 7, color: "#eb965d" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {item}
+                </motion.li>
               ))}
             </ul>
           </motion.div>
@@ -158,40 +119,44 @@ function Footer() {
             <h3>Quick Links</h3>
             <ul>
               {["About Us", "Our Plans", "FAQs", "Contacts"].map((link) => (
-                <motion.li key={link} whileHover={{ x: 5, color: "#eb965d" }}>
-                  <a href={`#${link.toLowerCase().replace(" ", "")}`}>{link}</a>
+                <motion.li
+                  key={link}
+                  whileHover={{ x: 7, color: "#eb965d" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Link to={`${link.toLowerCase().replace(" ", "")}`}>
+                    {link}
+                  </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
+        </motion.div>
 
-          <motion.div className="footer-col" variants={itemVariants}>
-            <h3>Our Gallery</h3>
-            <div className="gallery-grid">
-              {galleryImages.map((src, i) => (
-                <motion.div
-                  key={i}
-                  className="gallery-item"
-                  whileHover={{ scale: 1.1, zIndex: 10 }}
-                  style={{ 
-                    backgroundImage: `url(${src})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  }}
-                />
-              ))}
-            </div>
+        <div className="footer-bottom-bar">
+          <motion.div
+            className="support-badge-small"
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "rgba(235, 150, 93, 0.15)",
+            }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <FaSquarePhone className="phone-icon-small" />
+            <strong>+254 793 888 552</strong>
           </motion.div>
-        </motion.div>
 
-        <motion.div
-          className="footer-copyright"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-          <p>© Copyright {currentYear} by HomeNet. All Rights Reserved.</p>
-        </motion.div>
+          <motion.div
+            className="footer-copyright"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <p>© {currentYear} HomeNet. Built for the community.</p>
+          </motion.div>
+        </div>
       </div>
     </footer>
   );

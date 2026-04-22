@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './CookieConsent.css'; // Import the new CSS file
+import './CookieConsent.css'; 
 
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
