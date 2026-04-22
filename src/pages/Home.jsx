@@ -5,9 +5,8 @@ import WhyProcess from "../components/WhyProcess";
 import Services from "../components/Services";
 import Plans from "../components/Plans";
 import Availability from "../components/CoverageChecker";
-import Contact from "../pages/Contact";
 import FaqSection from "../components/Faq/FaqSection";
-import Community from "../pages/Community";
+
 
 const Home = () => {
   return (
@@ -19,8 +18,8 @@ const Home = () => {
       <Plans />
       <Availability />
       <FaqSection />
-      {/* <Contact /> */}
-      <Community />
+      
+      
     </div>
   );
 };

@@ -203,3 +203,27 @@ box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
   .contact-visual-side { padding: 4rem; border-right: none; border-bottom: 1px solid #f1f5f9; }
   .contact-container { margin-top: -2rem; }
 }
+
+
+
+
+@media (max-width: 480px) {
+ .contact-main-grid{
+  display: flex;
+  flex-direction: column;
+ }
+
+
+ .info-card {
+  background: #d35e10;
+  margin: 15px ;
+  flex-direction: column;
+ 
+}
+.info-card h4 { color: #ffffff; margin-bottom: 0.5rem; }
+.info-card p { color: #f1f1f1; margin: 0; }
+
+.info-icon {
+  color: #ffffff;
+}
+}

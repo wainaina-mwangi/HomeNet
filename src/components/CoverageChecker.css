@@ -10,6 +10,7 @@
  url('../assets/IMAGE_2.png');
  background-position: center;
  background-repeat: no repeat;
+ background-attachment: fixed;
  
     
 }
