@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Community from "./pages/Community";
 import SpeedCheck from "./pages/SpeedCheck";
+import CookieConsent  from "./components/CookieConsent";
 
 const App = () => {
   const [initialLoading, setInitialLoading] = useState(true);
@@ -40,6 +41,7 @@ const App = () => {
       <ToastContainer position="top-center" reverseOrder={false} />
       <ThemeProvider>
         <ScrollToTop />
+        <CookieConsent />
         <TopNavbar />
         <Navbar />
         <Suspense fallback={<Loader />}>
