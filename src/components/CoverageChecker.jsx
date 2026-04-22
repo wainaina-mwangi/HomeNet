@@ -20,7 +20,10 @@ const CoverageChecker = () => {
     "Sarakasi",
     "Glucola",
     "Mugure",
-    "ngomongo"
+    "ngomongo",
+    "gomongo",
+    "gathesha",
+    "powerline"
   ];
 
   const checkCoverage = (e) => {
