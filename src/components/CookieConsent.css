@@ -22,7 +22,7 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
-/* Header Section */
+
 .cookie-content {
   display: flex;
   align-items: flex-start;
@@ -126,5 +126,23 @@
     left: auto;
     width: 100%;
     max-width: 400px;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .cookie-wrapper {
+  
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    width: 100%;
+    max-width: 100%; 
+    padding: 20px;
+    box-sizing: border-box; 
+    border-radius: 0; 
+    margin: 0; 
   }
 }
