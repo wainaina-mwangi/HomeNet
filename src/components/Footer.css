@@ -1,8 +1,23 @@
+
+
+
 :root {
+ 
   --footer-bg: #2a2d9b;
-  --accent-orange:  #ff6d00;
+  --accent-orange: #ff6d00;
   --text-dim: #94a3b8;
   --glass: rgba(255, 255, 255, 0.03);
+  --input-bg: transparent;
+  --card-bg: transparent;
+}
+
+
+.dark {
+  --footer-bg: #0f172a; 
+  --text-dim: #64748b;
+  --glass: rgba(0, 0, 0, 0.2);
+  --input-bg: #1e293b;
+  --card-bg: #1e293b;
 }
 
 .homenet-footer {

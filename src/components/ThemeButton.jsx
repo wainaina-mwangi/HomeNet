@@ -1,7 +1,7 @@
 import { useTheme } from "../pages/ThemeContext";
 import { MdDarkMode } from "react-icons/md";
 import { LuSunMedium } from "react-icons/lu";
-import "./ThemeButton.css"; // Import the CSS file below
+import "./ThemeButton.css"; 
 
 const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
@@ -12,7 +12,7 @@ const ThemeButton = () => {
       className={`theme-toggle-btn ${theme}`}
       aria-label="Toggle Theme"
     >
-      {/* Background Gradient Layer */}
+      
       <span className="btn-gradient-overlay" />
 
       <div className="icon-wrapper">
@@ -27,7 +27,7 @@ const ThemeButton = () => {
         )}
       </div>
 
-      {/* Decorative Brand Corners */}
+      
       <div className="corner corner-top-right" />
       <div className="corner corner-bottom-left" />
     </button>

@@ -1,3 +1,44 @@
+
+
+:root {
+  --nav-bg: #ffffff;
+  --nav-border: #e2e8f0;
+  --nav-text: #050c1d;
+  --nav-text-dim: #64748b;
+}
+
+.dark {
+  --nav-bg: #0f172a;      
+  --nav-border: #a7521a;  
+  --nav-text: #ffffff;
+  --nav-text-dim: #64748b; 
+}
+
+
+.navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 2px solid var(--nav-border);
+  transition: all 0.5s ease;
+}
+
+.nav-logo-text {
+  color: var(--nav-text);
+}
+
+.nav-subtext {
+  color: var(--nav-text-dim);
+}
+
+.nav-link {
+  color: var(--nav-text-dim);
+}
+
+.nav-link:hover {
+  color: #ff6d00; 
+}
+
+
+
 .navbar{
     padding: 20px 30px;
 }
