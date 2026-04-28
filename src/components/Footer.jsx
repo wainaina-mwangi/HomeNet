@@ -11,28 +11,34 @@ function Footer() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    const apiKey = import.meta.env.VITE_API_KEY;
+    if (!apiKey) {
+      toast.error("Environment Variable not found!");
+      return;
+    }
+
     const formData = new FormData(event.target);
+    formData.append("access_key", apiKey);
+    formData.append("subject", "New Newsletter Subscriber");
 
-    // Web3Forms Access Key
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+      const data = await response.json();
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      toast.success("Message sent successfully!");
-      event.target.reset();
-    } else {
-      toast.error("Something went wrong. Please try again.");
+      if (data.success) {
+        toast.success("Thanks for subscribing");
+        event.target.reset();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      console.error("CORS or Network Error:", error);
+      toast.error("Blocked by rate limit. Please wait 5 minutes.");
     }
   };
 

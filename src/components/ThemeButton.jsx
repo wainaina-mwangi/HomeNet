@@ -1,6 +1,7 @@
 import { useTheme } from "../pages/ThemeContext";
 import { MdDarkMode } from "react-icons/md";
 import { LuSunMedium } from "react-icons/lu";
+import "./ThemeButton.css"; // Import the CSS file below
 
 const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
@@ -8,34 +9,27 @@ const ThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="group relative flex items-center justify-center p-2.5 
-                 transition-all duration-500 active:scale-90 overflow-hidden
-                 
-              
-               Dark Mode: Deep Navy Glass 
-                 
-                 hover:border-brand-orange/50 focus:outline-none"
+      className={`theme-toggle-btn ${theme}`}
       aria-label="Toggle Theme"
     >
-      <span className="absolute inset-0 z-0 bg-gradient-to-tr from-brand-orange/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      {/* Background Gradient Layer */}
+      <span className="btn-gradient-overlay" />
 
-      <div className="relative z-10 flex items-center justify-center transition-all duration-700">
+      <div className="icon-wrapper">
         {theme === "light" ? (
-          <div className="flex items-center justify-center animate-in fade-in zoom-in spin-in-90 duration-500">
-            {/* Sun Icon in Brand Orange */}
-            <LuSunMedium className="text-xl text-brand-orange transition-transform group-hover:rotate-45" />
+          <div className="icon-container sun-animate">
+            <LuSunMedium className="theme-icon sun" />
           </div>
         ) : (
-          <div className="flex items-center justify-center animate-in fade-in zoom-in spin-in-180 duration-500">
-            {/* Moon Icon in Brand Orange */}
-            <MdDarkMode className="text-xl text-brand-orange drop-shadow-[0_0_8px_rgba(255,109,0,0.4)] transition-transform group-hover:-rotate-12" />
+          <div className="icon-container moon-animate">
+            <MdDarkMode className="theme-icon moon" />
           </div>
         )}
       </div>
 
       {/* Decorative Brand Corners */}
-      <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-brand-orange/40 opacity-0 group-hover:opacity-100 transition-opacity" />
-      <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-brand-orange/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="corner corner-top-right" />
+      <div className="corner corner-bottom-left" />
     </button>
   );
 };
