@@ -9,11 +9,31 @@ function Footer() {
   const [email, setEmail] = useState("");
   const currentYear = new Date().getFullYear();
 
-  const notify = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
-    if (email.trim() === "") return;
-    toast.success("Subscribed to HomeNet!");
-    setEmail("");
+    const formData = new FormData(event.target);
+
+    // Web3Forms Access Key
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success("Message sent successfully!");
+      event.target.reset();
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   const containerVariants = {
@@ -54,12 +74,14 @@ function Footer() {
           </div>
 
           <div className="subscription-section">
-            <form onSubmit={notify} className="newsletter-form">
+            <form onSubmit={onSubmit} className="newsletter-form">
               <input
-                type="email"
                 placeholder="Join our newsletter"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                name="email"
+                required
               />
               <motion.button
                 type="submit"

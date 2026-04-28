@@ -1,5 +1,10 @@
 import React from "react";
-import { FaPaperPlane, FaPhoneVolume, FaClock, FaLocationDot } from "react-icons/fa6";
+import {
+  FaPaperPlane,
+  FaPhoneVolume,
+  FaClock,
+  FaLocationDot,
+} from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { toast } from "react-toastify";
 import "./Contact.css";
@@ -7,36 +12,49 @@ import "./Contact.css";
 const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    const apiKey = import.meta.env.VITE_API_KEY;
+
+    // console.log("Testing API Key:", apiKey);
+
+    if (!apiKey) {
+      toast.error("Environment Variable not found!");
+      return;
+    }
+
     const formData = new FormData(event.target);
+    formData.append("access_key", apiKey);
 
-    // Web3Forms Access Key
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+      const data = await response.json();
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
-
-    if (res.success) {
-      toast.success("Message sent successfully!");
-      event.target.reset();
-    } else {
-      toast.error("Something went wrong. Please try again.");
+      if (data.success) {
+        toast.success("Message sent successfully!");
+        event.target.reset();
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      console.error("CORS or Network Error:", error);
+      toast.error("Blocked by rate limit. Please wait 5 minutes.");
     }
   };
 
   return (
     <section className="contact-page-section">
       <div className="contact-hero">
-        <h1 className="hero-title">Contact <span className="highlight">Us</span></h1>
-        <p className="hero-subtitle">Have a question? We'd love to hear from you. Reach out via the form below, call us, or visit our school..</p>
+        <h1 className="hero-title">
+          Contact <span className="highlight">Us</span>
+        </h1>
+        <p className="hero-subtitle">
+          Have a question? We'd love to hear from you. Reach out via the form
+          below, call us, or visit our school..
+        </p>
       </div>
 
       <div className="contact-container">
@@ -47,23 +65,36 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* 3. Right Side: Web3Form */}
           <div className="contact-glass-form">
             <h3 className="form-top-text">Feel free to reach us</h3>
             <form onSubmit={onSubmit}>
               <div className="form-grid">
                 <div className="input-box">
-                  <input type="text" name="name" required placeholder="Your Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your Name"
+                  />
                 </div>
                 <div className="input-box">
-                  <input type="email" name="email" required placeholder="Email Address" />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email Address"
+                  />
                 </div>
               </div>
               <div className="input-box">
                 <input type="text" name="subject" placeholder="Subject" />
               </div>
               <div className="input-box">
-                <textarea name="message" required placeholder="How can we help you?"></textarea>
+                <textarea
+                  name="message"
+                  required
+                  placeholder="How can we help you?"
+                ></textarea>
               </div>
               <button type="submit" className="submit-btn">
                 Send Message <FaPaperPlane />
@@ -91,13 +122,13 @@ const Contact = () => {
         </div>
       </div>
       <div className="map-wrapper">
-        <iframe 
+        <iframe
           title="HomeNet Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.51590835905!2d36.894273!3d-1.243555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1437340e678b%3A0x6b432924f0c4a4f2!2sLucky%20Summer%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1712345678901!5m2!1sen!2ske" 
-          width="100%" 
-          height="450" 
-          style={{ border: 0 }} 
-          allowFullScreen="" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.51590835905!2d36.894273!3d-1.243555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1437340e678b%3A0x6b432924f0c4a4f2!2sLucky%20Summer%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1712345678901!5m2!1sen!2ske"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen=""
           loading="lazy"
         ></iframe>
       </div>
