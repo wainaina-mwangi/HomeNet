@@ -6,7 +6,7 @@ import Services from "../components/Services";
 import Plans from "../components/Plans";
 import Availability from "../components/CoverageChecker";
 import FaqSection from "../components/Faq/FaqSection";
-
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
       <Plans />
       <Availability />
       <FaqSection />
-      
+       <WhatsAppButton/>
       
     </div>
   );

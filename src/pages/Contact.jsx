@@ -50,7 +50,7 @@ const Contact = () => {
         </h1>
         <p className="hero-subtitle dark:text-slate-400 max-w-2xl mx-auto">
           Have a question? We'd love to hear from you. Reach out via the form
-          below, call us, or visit our school.
+          below, call us, or visit our offices.
         </p>
       </div>
 

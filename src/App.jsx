@@ -22,6 +22,7 @@ import Community from "./pages/Community";
 import SpeedCheck from "./pages/SpeedCheck";
 import CookieConsent  from "./components/CookieConsent";
 
+
 const App = () => {
   const [initialLoading, setInitialLoading] = useState(true);
 
@@ -58,6 +59,7 @@ const App = () => {
           </Routes>
         </Suspense>
         <Footer></Footer>
+       
       </ThemeProvider>
     </div>
   );
