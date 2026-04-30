@@ -33,7 +33,7 @@ const Navbar = () => {
             >
               {item.title}
             </Link>
-            <span className="absolute rounded -bottom-8 left-0 w-0 h-1 bg-brand-orange transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute rounded -bottom-8 left-0 w-0 h-1 bg-brand-orange  transition-all duration-300 group-hover:w-full"></span>
           </li>
         ))}
       </ul>

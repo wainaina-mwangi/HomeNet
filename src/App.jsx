@@ -18,7 +18,7 @@ import CoverageChecker from "./components/CoverageChecker";
 import FaqSection from "./components/Faq/FaqSection";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
-import Community from "./pages/Community";
+import News from "./pages/News";
 import SpeedCheck from "./pages/SpeedCheck";
 import CookieConsent  from "./components/CookieConsent";
 
@@ -54,7 +54,7 @@ const App = () => {
             <Route path="/CoverageChecker" element={<CoverageChecker />} />
             <Route path="/FaqSection" element={<FaqSection />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/Community" element={<Community />} />
+            <Route path="/News" element={<News />} />
             <Route path="/SpeedCheck" element={<SpeedCheck />} />
           </Routes>
         </Suspense>

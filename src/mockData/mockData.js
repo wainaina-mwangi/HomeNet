@@ -36,8 +36,8 @@ export const NavbarMenu = [
   },
   {
     id: 7,
-    title: "Community",
-    link: "community",
+    title: "News",
+    link: "news",
   },
 
   {
