@@ -43,7 +43,7 @@ const WhyProcess = () => {
   return (
     <section className="process-section p-0 overflow-hidden">
       <div
-        className="relative min-h-[100vh] w-full bg-fixed bg-cover bg-center flex items-center justify-center py-20"
+        className="relative min-h-[80vh] w-full bg-fixed bg-cover bg-center flex items-center justify-center py-20"
         style={{
           backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${image_7})`,
         }}
