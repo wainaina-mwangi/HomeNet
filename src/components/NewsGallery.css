@@ -103,6 +103,12 @@
   background: #2a2d9b;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  background-image: 
+ linear-gradient( rgba(26, 25, 25, 0.788), rgba(0, 0, 0, 0.74)),
+ url('../assets/IMAGE_8.jpg');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .stat-item {

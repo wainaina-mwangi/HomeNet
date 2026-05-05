@@ -9,7 +9,7 @@
 
 .news-hero {
   background: linear-gradient(#2a2d9b,#497ab6); 
-  padding: 10rem 2rem 4rem; 
+  padding: 2rem 0.9rem 1rem; 
   text-align: center;
   position: relative;
   margin-bottom: 0; 
@@ -21,11 +21,11 @@
   gap: 10px;
   background: rgba(208, 224, 214, 0.1);
   color: #d3e0d8;
-  padding: 8px 16px;
+  padding: 8px 8px;
   border-radius: 100px;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 2rem; 
+  margin-bottom: 1rem; 
   border: 1px solid rgba(233, 238, 235, 0.2);
 }
 
@@ -38,7 +38,7 @@
 
 .news-hero p {
   max-width: 600px; 
-  margin: 1.5rem auto 0; 
+  margin: 1rem auto 0; 
   color: #ffffff;
   line-height: 1.6;
 }
@@ -59,10 +59,10 @@
 
 @media (max-width: 480px) {
   .news-hero > h1{
-  padding: 8px 16px;
+  padding: 8px 8px;
   font-size: 0.85rem;
   font-weight: 400;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
  
  
 }

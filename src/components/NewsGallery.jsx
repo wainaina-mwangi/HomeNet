@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NewsGallery.css";
+import LiveStats from "../components/LiveStats";
 
 const localGallery = [
   {
@@ -15,25 +16,25 @@ const localGallery = [
     desc: "Digital logistics for waste management.",
   },
   {
-    id: 2,
+    id: 3,
     src: "/images/IMAGE_1.png",
     title: "A Cleaner Future",
     desc: "Digital logistics for waste management.",
   },
   {
-    id: 2,
+    id: 4,
     src: "/images/IMAGE_1.png",
     title: "A Cleaner Future",
     desc: "Digital logistics for waste management.",
   },
   {
-    id: 2,
+    id: 5,
     src: "/images/IMAGE_1.png",
     title: "A Cleaner Future",
     desc: "Digital logistics for waste management.",
   },
   {
-    id: 2,
+    id: 6,
     src: "/images/IMAGE_1.png",
     title: "A Cleaner Future",
     desc: "Digital logistics for waste management.",
@@ -63,25 +64,8 @@ export const CoolGallery = () => {
         ))}
       </div>
 
-      {/* 2. Statistics Section (New) */}
-      <div className="stats-container">
-        <div className="stat-item">
-          <span className="stat-number">50+</span>
-          <span className="stat-label">Homes Connected</span>
-        </div>
-        <div className="stat-divider"></div>
-        <div className="stat-item">
-          <span className="stat-number">1.2k</span>
-          <span className="stat-label">Reports Resolved</span>
-        </div>
-        <div className="stat-divider"></div>
-        <div className="stat-item">
-          <span className="stat-number">100%</span>
-          <span className="stat-label">Network Uptime</span>
-        </div>
-      </div>
+      <LiveStats />
 
-      {/* 3. Call to Action Section (New) */}
       <div className="footer-cta">
         <h2>Have a visionary project in mind?</h2>
         <p>Let's build the future of Nairobi's digital landscape together.</p>
@@ -95,7 +79,6 @@ export const CoolGallery = () => {
         </button>
       </div>
 
-      {/* Lightbox / Zoom-out View */}
       {activeImg && (
         <div className="lightbox" onClick={() => setActiveImg(null)}>
           <div className="lightbox-content">
