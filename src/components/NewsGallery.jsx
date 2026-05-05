@@ -2,40 +2,41 @@ import React, { useState } from "react";
 import "./NewsGallery.css";
 import LiveStats from "../components/LiveStats";
 
+
 const localGallery = [
   {
     id: 1,
-    src: "/images/IMPACT_1.png", 
+    src: "/images/IMPACT_1.jpg", 
     title: "Connectivity with Purpose",
     desc: "Affordable high-speed internet designed for the heart of the community.",
   },
   {
     id: 2,
-    src: "/images/IMPACT_2.png", 
+    src: "/images/IMPACT_2.jpg", 
     title: "The 30% Pledge",
     desc: "30% of every subscription directly funds school fees for local children.",
   },
   {
     id: 3,
-    src: "/images/IMPACT_3.png", 
+    src: "/images/IMPACT_3.jpg", 
     title: "Digital Classrooms",
     desc: "Transforming local homes into hubs of learning and global opportunity.",
   },
   {
     id: 4,
-    src: "/images/IMPACT_4.png", 
+    src: "/images/IMPACT_4.jpg", 
     title: "Empowering Futures",
     desc: "Meet the students whose education is powered by your connectivity.",
   },
   {
     id: 5,
-    src: "/images/IMPACT_5.png", 
+    src: "/images/IMPACT_5.jpg", 
     title: "Bridging the Gap",
     desc: "Bringing world-class infrastructure to underserved neighborhoods.",
   },
   {
     id: 6,
-    src: "/images/IMPACT_6.png", 
+    src: "/images/IMPACT_6.jpg", 
     title: "Community Growth",
     desc: "When you browse, they learn. Together, we build a smarter tomorrow.",
   },

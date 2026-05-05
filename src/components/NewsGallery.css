@@ -1,7 +1,7 @@
 :root {
   --primary-blue: #3b82f6;
   --bg-deep: #ffffff;
-  --card-bg: linear-gradient(#2a2d9b,#497ab6);
+  --card-bg: linear-gradient(#242899,#281eb9);
   --text-dim: #ffffff;
 }
 
@@ -31,7 +31,7 @@
   font-size: 1.1rem;
 }
 
-/* Grid Logic */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -40,7 +40,7 @@
   margin: 0 auto 100px;
 }
 
-/* Card Styling */
+
 .gallery-card {
   position: relative;
   background: var(--card-bg);
@@ -83,6 +83,7 @@
   margin: 0;
   color: #ff6d00;
   font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .card-overlay p {
@@ -99,11 +100,9 @@
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto 100px;
-  padding: 40px;
-  background: #2a2d9b;
+  padding: 60px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background-image: 
+ background-image: 
  linear-gradient( rgba(26, 25, 25, 0.788), rgba(0, 0, 0, 0.74)),
  url('../assets/IMAGE_8.jpg');
  background-position: center;
@@ -130,16 +129,16 @@
 }
 
 .stat-divider {
-  width: 1px;
+  width: 3px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(224, 218, 218, 0.596);
 }
 
 
 .footer-cta {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(#2a2d9b,#497ab6);
+  background: var(--card-bg);
   border-radius: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -148,20 +147,16 @@
 .cta-button {
   margin-top: 30px;
   padding: 16px 40px;
-  background: var(--primary-blue);
+  background: rgb(4, 34, 116);
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.cta-button:hover {
-  background: #2563eb;
-  transform: scale(1.05);
-}
 
 
 .lightbox {
