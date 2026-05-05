@@ -35,7 +35,7 @@
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto 100px;
 }
@@ -142,18 +142,25 @@
   border-radius: 40px;
   max-width: 1200px;
   margin: 0 auto;
+   box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
+
 }
 
-.cta-button {
-  margin-top: 30px;
-  padding: 16px 40px;
-  background: rgb(4, 34, 116);
+.mail-button {
+display: inline-block;      
+  margin: 40px auto 0; 
+   padding: 16px 40px;
+  background: rgb(206, 71, 9);
   color: white;
   border: none;
   border-radius: 10px;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
+  position: relative;
+  z-index: 10; 
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
@@ -233,4 +240,12 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+
+@media (max-width: 480px) {
+   .stat-divider {
+  display: none;
+}
+
 }

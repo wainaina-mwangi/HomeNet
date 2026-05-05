@@ -1,42 +1,42 @@
 import React, { useState } from "react";
 import "./NewsGallery.css";
 import LiveStats from "../components/LiveStats";
-
+import { Link } from "react-router-dom";
 
 const localGallery = [
   {
     id: 1,
-    src: "/images/IMPACT_1.jpg", 
+    src: "/images/IMPACT_1.jpg",
     title: "Connectivity with Purpose",
     desc: "Affordable high-speed internet designed for the heart of the community.",
   },
   {
     id: 2,
-    src: "/images/IMPACT_2.jpg", 
+    src: "/images/IMPACT_2.jpg",
     title: "The 30% Pledge",
     desc: "30% of every subscription directly funds school fees for local children.",
   },
   {
     id: 3,
-    src: "/images/IMPACT_3.jpg", 
+    src: "/images/IMPACT_3.jpg",
     title: "Digital Classrooms",
     desc: "Transforming local homes into hubs of learning and global opportunity.",
   },
   {
     id: 4,
-    src: "/images/IMPACT_4.jpg", 
+    src: "/images/IMPACT_4.jpg",
     title: "Empowering Futures",
     desc: "Meet the students whose education is powered by your connectivity.",
   },
   {
     id: 5,
-    src: "/images/IMPACT_5.jpg", 
+    src: "/images/IMPACT_5.jpg",
     title: "Bridging the Gap",
     desc: "Bringing world-class infrastructure to underserved neighborhoods.",
   },
   {
     id: 6,
-    src: "/images/IMPACT_6.jpg", 
+    src: "/images/IMPACT_6.jpg",
     title: "Community Growth",
     desc: "When you browse, they learn. Together, we build a smarter tomorrow.",
   },
@@ -70,14 +70,9 @@ export const CoolGallery = () => {
       <div className="footer-cta">
         <h2>Have a visionary project in mind?</h2>
         <p>Let's build the future of Nairobi's digital landscape together.</p>
-        <button
-          className="cta-button"
-          onClick={() =>
-            (window.location.href = "mailto:wainainaerastus2@gmail.com")
-          }
-        >
-          Let's Collaborate
-        </button>
+       <div>
+         <Link to="/contact" className="mail-button">Let's Collaborate</Link>
+       </div>
       </div>
 
       {activeImg && (
