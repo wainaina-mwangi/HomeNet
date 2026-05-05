@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./WhyProcess.css";
-import image_7 from "../assets/IMAGE_7.jpg";
+import image_7 from "../assets/IMAGE_7.webp";
 
 const steps = [
   {

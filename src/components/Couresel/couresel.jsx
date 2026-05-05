@@ -4,9 +4,9 @@ import { GoPaperAirplane } from "react-icons/go";
 import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import image_4 from "../../assets/IMAGE_4.png";
-import image_1 from "../../assets/IMAGE_1.png";
-import image_2 from "../../assets/IMAGE_2.png";
+import image_4 from "../../assets/IMAGE_4.webp";
+import image_1 from "../../assets/IMAGE_1.webp";
+import image_2 from "../../assets/IMAGE_2.webp";
 
 const Couresel = () => {
   const fadeInUp = {
