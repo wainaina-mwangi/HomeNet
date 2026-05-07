@@ -44,9 +44,9 @@
 }
 
 
-/* --- Mobile Navigation Styles --- */
 
-/* The dark background behind the drawer */
+
+
 .mobile-overlay {
   position: fixed;
   inset: 0;
@@ -63,7 +63,7 @@
   pointer-events: auto;
 }
 
-/* The actual side drawer */
+
 .mobile-drawer {
   position: fixed;
   top: 0;
@@ -79,7 +79,7 @@
 }
 
 .dark .mobile-drawer {
-  background: #0f172a; /* Slate 900 */
+  background: #0f172a; 
 }
 
 .mobile-drawer.open {
@@ -93,7 +93,7 @@
   padding: 2rem;
 }
 
-/* Header inside drawer */
+
 .drawer-header {
   display: flex;
   justify-content: space-between;
@@ -154,7 +154,7 @@
 }
 
 .mobile-link:hover {
-  color: #ff4500; /* brand-orange */
+  color: #ff4500; 
   padding-left: 8px;
 }
 
@@ -193,18 +193,4 @@
   margin-bottom: 1rem;
 }
 
-.cta-button {
-  width: 100%;
-  background: #ff4500; /* brand-orange */
-  color: white;
-  border: none;
-  padding: 0.8rem;
-  border-radius: 0.75rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
 
-.cta-button:active {
-  transform: scale(0.98);
-}
