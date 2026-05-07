@@ -45,7 +45,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* Right Side Actions */}
+     
       <div className="flex items-center gap-3">
         <ThemeButton />
         
@@ -72,7 +72,6 @@ const Navbar = () => {
           </div>
 
           <div className="drawer-body">
-            <p className="menu-label">Main Menu</p>
             {NavbarMenu.map((item) => (
               <Link 
                 key={item.id} 
@@ -85,8 +84,6 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-
-         
         </div>
       </div>
     </nav>
