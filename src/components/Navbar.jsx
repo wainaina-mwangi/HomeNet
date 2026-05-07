@@ -86,12 +86,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="drawer-footer">
-            <div className="promo-box">
-              <p>Experience high-speed fiber connectivity.</p>
-              <button className="cta-button">Get Started</button>
-            </div>
-          </div>
+         
         </div>
       </div>
     </nav>
