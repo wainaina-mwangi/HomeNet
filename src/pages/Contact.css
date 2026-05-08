@@ -51,7 +51,7 @@
 .hero-title {
   font-size: clamp(2.25rem, 5vw, 3.25rem);
   font-weight: 800;
-  color: #091f68; /* Crisp deep brand blue */
+  color: #ffffff; /* Crisp deep brand blue */
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
