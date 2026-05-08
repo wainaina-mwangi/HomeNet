@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar flex items-center justify-between sticky top-0 z-50 px-6 py-5 bg-white dark:bg-gray-900">
-      {/* Logo Section */}
+     
       <div className="navbar-logo">
         <Link to="/" className="flex items-center gap-2 group no-underline">
           <div className="p-2 bg-brand-orange/10 rounded-lg group-hover:bg-brand-orange transition-colors duration-300">
@@ -30,7 +30,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Desktop Menu */}
+  
       <ul className="hidden md:flex items-center gap-8">
         {NavbarMenu.map((item) => (
           <li key={item.id} className="relative group">
@@ -58,7 +58,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE NAV SECTION */}
+
       <div className={`mobile-overlay ${isOpen ? "active" : ""}`} onClick={toggleMenu} />
       
       <div className={`mobile-drawer ${isOpen ? "open" : ""}`}>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="drawer-header">
             <div className="drawer-logo">
               <IoWifi className="text-brand-orange" />
-              <span>Home<span className="text-brand-orange">Net</span></span>
+              <span className="text-white">Home<span className="text-brand-orange">Net</span></span>
             </div>
             <button className="close-btn" onClick={toggleMenu}><MdClose /></button>
           </div>
