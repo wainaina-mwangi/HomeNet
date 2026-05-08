@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa6";
 import { MdEmail, MdArrowForward } from "react-icons/md";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 import "./Contact.css";
 
 const Contact = () => {
@@ -42,28 +43,77 @@ const Contact = () => {
     }
   };
 
+ 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 80, damping: 12 },
+    },
+  };
+
   return (
     <section className="contact-page-section dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500">
-      <div className="contact-hero py-16 text-center px-4">
-  <div className="max-w-3xl mx-auto">
-    <span className="hero-tagline inline-block text-xs font-bold uppercase tracking-widest text-[#FF6D00]  px-3.5 py-1.5  mb-4">
-      Get In Touch
-    </span>
-    <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight text-[#091f68] dark:text-white mb-4">
-      Let's build something <span className="highlight text-[#FF6D00]">great</span> together
-    </h1>
-    <p className="hero-subtitle text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
-      Have an inquiry, project, or just want to say hello? Our team is ready to connect, consult, and build solutions with you.
-    </p>
-  </div>
-</div>
-
-      <div className="contact-container max-w-6xl mx-auto px-4">
-        {/* Main Master Panel */}
-        <div className="contact-master-panel">
-          
       
-          <div className="contact-sidebar">
+     
+      <div className="contact-hero py-16 text-center px-4">
+        <motion.div 
+          className="max-w-3xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.span 
+            variants={itemVariants}
+            className="hero-tagline inline-block text-xs font-bold uppercase tracking-widest text-[#FF6D00] px-3.5 py-1.5 mb-4"
+          >
+            Get In Touch
+          </motion.span>
+          
+          <motion.h1 
+            variants={itemVariants}
+            className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight text-[#091f68] dark:text-white mb-4"
+          >
+            Let's build something <span className="highlight text-[#FF6D00]">great</span> together
+          </motion.h1>
+          
+          <motion.p 
+            variants={itemVariants}
+            className="hero-subtitle text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto"
+          >
+            Have an inquiry, project, or just want to say hello? Our team is ready to connect, consult, and build solutions with you.
+          </motion.p>
+        </motion.div>
+      </div>
+      <div className="contact-container max-w-6xl mx-auto px-4">
+       <motion.div 
+          className="contact-master-panel"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 70, damping: 16, delay: 0.35 }}
+        >
+           <div className="contact-sidebar">
             <div className="sidebar-background-gradient"></div>
             
             <div className="sidebar-header">
@@ -74,7 +124,6 @@ const Contact = () => {
               </p>
             </div>
 
-    
             <div className="sidebar-connect-list">
               <a href="mailto:support@homenet.co.ke" className="sidebar-connect-card">
                 <div className="icon-wrapper">
@@ -98,16 +147,11 @@ const Contact = () => {
                 <MdArrowForward className="hover-arrow" />
               </a>
             </div>
-
-            {/* Micro branding footer */}
-            <div className="sidebar-footer">
-             
+             <div className="sidebar-footer">
               <p>Average response time: &lt; 2 hours</p>
             </div>
           </div>
-
-        
-          <div className="contact-form-panel">
+         <div className="contact-form-panel">
             <div className="form-header">
               <h3>Submit a Request</h3>
               <p>Fields marked with * are required to process your inquiry.</p>
@@ -142,7 +186,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Subject */}
+        
               <div className="input-group">
                 <label htmlFor="subject">Subject</label>
                 <input
@@ -154,8 +198,6 @@ const Contact = () => {
                 />
                 <span className="input-focus-bar"></span>
               </div>
-
-              {/* Message */}
               <div className="input-group">
                 <label htmlFor="message">Message *</label>
                 <textarea
@@ -169,7 +211,7 @@ const Contact = () => {
                 <span className="input-focus-bar"></span>
               </div>
 
-              {/* Redesigned Premium Button */}
+             
               <button type="submit" className="elite-submit-btn">
                 <span>Send Message</span>
                 <span className="btn-icon-circle">
@@ -179,36 +221,46 @@ const Contact = () => {
             </form>
           </div>
 
-        </div>
-
-        <div className="info-details-row">
-          <div className="info-card">
+        </motion.div>
+        <motion.div 
+          className="info-details-row"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.1 }
+            }
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div className="info-card" variants={cardVariants}>
             <div className="info-card-icon-box">
               <FaLocationDot size={20} />
             </div>
             <h4>Our Headquarters</h4>
             <p>Lucky Summer, Estate Office</p>
             <span className="location-city">Nairobi, Kenya</span>
-          </div>
-
-          <div className="info-card">
+          </motion.div>
+       <motion.div className="info-card" variants={cardVariants}>
             <div className="info-card-icon-box">
               <FaClock size={20} />
             </div>
             <h4>Business Hours</h4>
             <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
             <p className="support-special-text">Sunday: Emergency Ticket Support</p>
-          </div>
+          </motion.div>
 
-          <div className="info-card">
+          <motion.div className="info-card" variants={cardVariants}>
             <div className="info-card-icon-box">
               <FaPhoneVolume size={18} />
             </div>
             <h4>Direct Lines</h4>
             <p className="phone-accent">+254 793 888 552</p>
             <span className="phone-subtext">Toll-free inside network coverage</span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       {/* Map Section */}
