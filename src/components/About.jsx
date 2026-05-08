@@ -43,10 +43,7 @@ const About = () => {
           </motion.h2>
 
           <motion.p variants={itemVariants} className="description">
-            With over 15 years of experience in the industry, our team is
-            dedicated to providing reliable, affordable WiFi solutions tailored
-            to your needs. We pride ourselves on offering competitive prices and
-            exceptional, 24/7 support.
+            Fast, affordable, and built for our community. We provide reliable residential internet backed by round-the-clock support and a commitment to keeping local neighborhoods connected to global opportunities.
           </motion.p>
 
           <motion.div variants={itemVariants}>
