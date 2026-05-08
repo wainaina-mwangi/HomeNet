@@ -15,8 +15,16 @@
 .contact-hero {
   background-color: #f8fafc;
   padding: 6rem 1.5rem 8rem;
-  text-align: center;
-   margin: 0 auto;
+  
+  /* Flexbox Centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centers content horizontally */
+  justify-content: center;  /* Centers content vertically if height is specified */
+  text-align: center;       /* Keeps text alignment centered */
+  
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero-tagline {
