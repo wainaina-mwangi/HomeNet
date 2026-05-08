@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { NavbarMenu } from "../mockData/mockData";
 import { IoWifi } from "react-icons/io5";
-// import { MdMenu, MdClose } from "react-icons/md";
+import {  MdClose } from "react-icons/md";
 import { VscLayoutSidebarRightDock } from "react-icons/vsc";
-{/* <VscLayoutSidebarRightDock /> */}
 import ThemeButton from "../components/ThemeButton";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
