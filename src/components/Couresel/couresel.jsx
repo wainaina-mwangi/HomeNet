@@ -98,7 +98,7 @@ const Couresel = () => {
                 View Our Plans <GoPaperAirplane />
               </Link>
               <Link
-                to="/contact"
+                to="/CoverageChecker"
                 className="btn flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold py-3 px-8 rounded-2xl transition-all active:scale-95"
               >
                 Check Coverage
