@@ -101,3 +101,14 @@
 .dark .wa-tooltip::after {
   border-left-color: #0f172a;
 }
+
+
+@media(max-width:480px){
+.wa-float-container {
+  position: fixed;
+  bottom: 17px;
+  right: 17px;
+  z-index: 9999;
+}
+  
+}
