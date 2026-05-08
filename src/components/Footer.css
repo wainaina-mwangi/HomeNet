@@ -148,7 +148,7 @@
   .newsletter-form input { flex: 1; }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .newsletter-form {
     flex-direction: column; 
     padding: 0.8rem; 
