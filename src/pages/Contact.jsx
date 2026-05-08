@@ -46,7 +46,7 @@ const Contact = () => {
     <section className="contact-page-section dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500">
       <div className="contact-hero py-16 text-center px-4">
   <div className="max-w-3xl mx-auto">
-    <span className="hero-tagline inline-block text-xs font-bold uppercase tracking-widest text-[#FF6D00] bg-[#FF6D00]/10 px-3.5 py-1.5 rounded-full mb-4">
+    <span className="hero-tagline inline-block text-xs font-bold uppercase tracking-widest text-[#FF6D00]  px-3.5 py-1.5  mb-4">
       Get In Touch
     </span>
     <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight text-[#091f68] dark:text-white mb-4">
