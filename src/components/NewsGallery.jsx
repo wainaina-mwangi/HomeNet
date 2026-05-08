@@ -45,12 +45,20 @@ const localGallery = [
 export const CoolGallery = () => {
   const [activeImg, setActiveImg] = useState(null);
 
+  // Helper to assign asymmetric editorial layout classes
+  const getLayoutClass = (id) => {
+    if (id === 1) return "gallery-card card-featured";
+    if (id === 4) return "gallery-card card-wide";
+    return "gallery-card";
+  };
+
   return (
     <div className="news-container">
+      {/* Editorial Structural Grid */}
       <div className="gallery-grid">
         {localGallery.map((item) => (
           <div
-            className="gallery-card"
+            className={getLayoutClass(item.id)}
             key={item.id}
             onClick={() => setActiveImg(item)}
           >
@@ -58,30 +66,44 @@ export const CoolGallery = () => {
               <img src={item.src} alt={item.title} className="zoom-img" />
             </div>
             <div className="card-overlay">
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <div className="card-content-wrapper">
+                <h3>{item.title}</h3>
+                <p className="card-description">{item.desc}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <LiveStats />
+      {/* Structured Stats */}
+      <div className="stats-wrapper-section">
+        <LiveStats />
+      </div>
 
+      {/* Clean Call To Action */}
       <div className="footer-cta">
         <h2>Have a visionary project in mind?</h2>
         <p>Let's build the future of Nairobi's digital landscape together.</p>
-       <div>
-         <Link to="/contact" className="mail-button">Let's Collaborate</Link>
-       </div>
+        <div className="button-group">
+          <Link to="/contact" className="mail-button">
+            Let's Collaborate
+          </Link>
+        </div>
       </div>
 
+      {/* Minimalist Tactile Lightbox */}
       {activeImg && (
         <div className="lightbox" onClick={() => setActiveImg(null)}>
-          <div className="lightbox-content">
-            <img src={activeImg.src} alt="zoomed" />
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <div className="lightbox-image-box">
+              <img src={activeImg.src} alt={activeImg.title} />
+            </div>
             <div className="lightbox-text">
               <h2>{activeImg.title}</h2>
               <p>{activeImg.desc}</p>
+              <button className="lightbox-close" onClick={() => setActiveImg(null)}>
+                ✕ Close
+              </button>
             </div>
           </div>
         </div>
