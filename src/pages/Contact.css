@@ -87,7 +87,7 @@
   position: relative;
 }
 
-/* Replaced AI glow with clean, solid design hierarchy */
+
 .sidebar-background-gradient {
   display: none; 
 }
@@ -342,7 +342,7 @@
   background: #ffffff;
   padding: 2.5rem 2rem;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid blue;
   text-align: center;
   display: flex;
   flex-direction: column;
