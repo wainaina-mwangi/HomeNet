@@ -75,8 +75,6 @@ const Contact = () => {
 
   return (
     <section className="contact-page-section dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500">
-      
-     
       <div className="contact-hero py-16 text-center px-4">
         <motion.div 
           className="max-w-3xl mx-auto"
