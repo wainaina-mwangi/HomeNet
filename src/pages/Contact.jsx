@@ -45,19 +45,20 @@ const Contact = () => {
   return (
     <section className="contact-page-section dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500">
       
-      {/* Premium Hero Section */}
-      <div className="contact-hero">
-        <div className="hero-overlay"></div>
-        <div className="hero-content max-w-4xl mx-auto px-4 relative z-10">
-          <span className="hero-tagline">Get In Touch</span>
-          <h1 className="hero-title">
-            Let's build something <span className="highlight">great</span> together
-          </h1>
-          <p className="hero-subtitle">
-            Have an inquiry, project, or just want to say hello? Our team is ready to connect, consult, and build solutions with you.
-          </p>
-        </div>
-      </div>
+    {/* Simple & Neat Hero Section */}
+<div className="contact-hero py-16 text-center px-4">
+  <div className="max-w-3xl mx-auto">
+    <span className="hero-tagline inline-block text-xs font-bold uppercase tracking-widest text-[#FF6D00] bg-[#FF6D00]/10 px-3.5 py-1.5 rounded-full mb-4">
+      Get In Touch
+    </span>
+    <h1 className="hero-title text-4xl md:text-5xl font-extrabold tracking-tight text-[#091f68] dark:text-white mb-4">
+      Let's build something <span className="highlight text-[#FF6D00]">great</span> together
+    </h1>
+    <p className="hero-subtitle text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+      Have an inquiry, project, or just want to say hello? Our team is ready to connect, consult, and build solutions with you.
+    </p>
+  </div>
+</div>
 
       <div className="contact-container max-w-6xl mx-auto px-4">
         {/* Main Master Panel */}
