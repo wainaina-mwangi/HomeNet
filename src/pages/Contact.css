@@ -1,20 +1,21 @@
-
+/* ==========================================================================
+   Page Section & Hero Layout
+   ========================================================================== */
 .contact-page-section {
   background: #f8fafc; 
   min-height: 100vh;
 }
 
-
 .contact-hero {
-  background: linear-gradient(#0862cf,#497ab6); 
-  padding: 10rem 2rem 6rem;
+  padding: 10rem 2rem 8rem;
   text-align: center;
   position: relative;
-   background-image: 
- linear-gradient( rgba(26, 25, 25, 0.788), rgba(0, 0, 0, 0.74)),
- url('../assets/IMAGE_4.webp');
- background-position: center;
- background-repeat: no repeat;
+  background-image: 
+    linear-gradient(rgba(26, 25, 25, 0.82), rgba(0, 0, 0, 0.78)),
+    url('../assets/IMAGE_4.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -29,204 +30,261 @@
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   max-width: 650px;
   margin: 1.5rem auto 0;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
-
+/* ==========================================================================
+   Main Grid Container (The Form Panel)
+   ========================================================================== */
 .contact-container {
   max-width: 1100px;
-  margin: -4rem auto 0; 
+  margin: -6rem auto 0; /* Pulls form cleanly up onto the hero background */
   padding: 0 1.5rem;
   position: relative;
   z-index: 5;
-  
 }
 
 .contact-main-grid {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
-  gap: 0; 
- box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
   margin-bottom: 5rem;
-  background: #0862cf;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-
+/* ==========================================================================
+   Visual Side Redesign (Left Panel)
+   ========================================================================== */
 .contact-visual-side {
   background: #091f68;
+  padding: 3.5rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Clean, modern icon circle */
 .white-icon-circle {
-  width: 300px;
-  height: 300px;
-  background: #e2620d;
-  border-radius: 5px;
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .hero-white-icon {
-  font-size: 10rem;
-  color: #ffffff;
-  width: 300px;
-  height: 300px;
+  font-size: 1.75rem;
+  color: #FF6D00;
 }
 
-
+/* ==========================================================================
+   Form Side Redesign (Right Panel)
+   ========================================================================== */
 .contact-glass-form {
-  background: rgb(216, 75, 10);
-  padding: 4rem;
-  
+  background: #ffffff;
+  padding: 3.5rem;
 }
 
 .form-top-text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #091f68;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
-
+/* Custom inputs with crisp borders */
 .input-box {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .input-box input, 
 .input-box textarea {
   width: 100%;
-  padding: 1.2rem;
-  background: #ffffff;
-  border: 2px solid #0862cf;
-  border-radius: 0px !important; 
+  padding: 1rem 1.2rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px !important; 
   color: #020617;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
+  font-size: 0.95rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-box input:focus, 
 .input-box textarea:focus {
   outline: none;
-  border-color: #b98004;
-  box-shadow: 0 10px 20px -5px rgba(255, 109, 0, 0.2);
+  background: #ffffff;
+  border-color: #FF6D00;
+  box-shadow: 0 8px 20px -6px rgba(255, 109, 0, 0.15);
 }
 
 .input-box textarea {
-  height: 100px;
+  min-height: 120px;
   resize: none;
 }
 
+/* Premium submit action button */
 .submit-btn {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.1rem;
   background: #FF6D00;
   color: white;
   border: none;
-  border-radius: 0px; 
-  font-weight: 800;
+  border-radius: 6px !important; 
+  font-weight: 700;
+  font-size: 0.95rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  transition: 0.3s;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(255, 109, 0, 0.3);
 }
 
 .submit-btn:hover {
-  background: #e66200;
-  transform: translateY(-2px);
+  background: #e2620d;
+  box-shadow: 0 6px 20px rgba(255, 109, 0, 0.4);
+  transform: translateY(-1px);
 }
 
+.submit-btn:active {
+  transform: translateY(1px);
+}
 
+/* ==========================================================================
+   Info Cards Row (Bottom Panel)
+   ========================================================================== */
 .info-details-row {
-    
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 5rem;
 }
 
 .info-card {
   background: #ffffff;
-  padding: 60px 60px;
+  padding: 3rem 2rem;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  align-items: center;    
-  text-align: center;
-  border: 1px solid #FF6D00;
-  transition:ease ease-in-out ,.5s;
-   
+  align-items: center;   
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
 }
 
-.info-card:Hover{
-box-shadow: -1px 5px 2px 0px rgba(0,0,0,0.75);
+.info-card:hover {
+  transform: translateY(-4px);
+  border-color: #FF6D00;
+  box-shadow: 0 12px 24px -10px rgba(255, 109, 0, 0.15);
 }
 
 .info-icon {
-  font-size: 2rem;
-  
+  font-size: 2.25rem;
   color: #FF6D00;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -30px;
 }
 
-.info-card h4 { color: #020617; margin-bottom: 0.5rem; }
-.info-card p { color: #64748b; margin: 0; }
+.info-card h4 { 
+  color: #020617; 
+  font-weight: 700;
+  margin-bottom: 0.5rem; 
+}
 
+.info-card p { 
+  color: #64748b; 
+  margin: 0; 
+  font-size: 0.95rem;
+}
 
+/* Map adjustment */
 .map-wrapper {
-  filter: grayscale(1),invert(0.92); 
+  filter: grayscale(1) invert(0.92); 
   opacity: 0.8;
   line-height: 0;
 }
+
+/* ==========================================================================
+   Responsive Breakpoints & Touch Optimization
+   ========================================================================== */
 @media (max-width: 992px) {
-  .contact-main-grid { grid-template-columns: 1fr; }
-  .contact-visual-side { padding: 4rem; border-right: none; border-bottom: 1px solid #f1f5f9; }
-  .contact-container { margin-top: -2rem; }
+  .contact-main-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .contact-visual-side { 
+    padding: 3rem; 
+  }
+  .contact-glass-form { 
+    padding: 3rem; 
+  }
+  .contact-container { 
+    margin-top: -3rem; 
+  }
 }
 
-
-
-
+/* Target devices under 480px (e.g. Redmi 9A - 360px viewport) */
 @media (max-width: 480px) {
- .contact-main-grid{
-  display: flex;
-  flex-direction: column;
-    min-height: 80vh;
- }
+  .contact-container {
+    padding: 0 1rem;
+  }
 
+  .contact-visual-side {
+    padding: 2rem 1.5rem;
+  }
 
- .info-card {
-  background: #d35e10;
-  margin: 15px ;
-  flex-direction: column;
- 
-}
-.info-card h4 { color: #ffffff; margin-bottom: 0.5rem; }
-.info-card p { color: #f1f1f1; margin: 0; }
+  .contact-glass-form {
+    padding: 2.5rem 1.5rem;
+  }
 
-.info-icon {
-  color: #ffffff;
-}
+  .form-top-text {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Redefined touch target areas for phone displays */
+  .input-box input, 
+  .input-box textarea {
+    padding: 1.1rem;
+    font-size: 16px; /* Prevents auto-zoom scales in iOS/Android */
+  }
+
+  .info-card {
+    background: #d35e10;
+    margin: 0; /* Align with layout columns smoothly */
+    border: none;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .info-card h4 { 
+    color: #ffffff; 
+  }
   
+  .info-card p { 
+    color: #f1f1f1; 
+  }
 
+  .info-icon {
+    color: #ffffff;
+  }
 }
