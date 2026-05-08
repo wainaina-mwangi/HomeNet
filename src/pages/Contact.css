@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. Page Layout & Variables (Light & Dark Theme Resets)
-   ========================================================================== */
+
 .contact-page-section {
   background-color: #f8fafc;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -9,29 +7,24 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ==========================================================================
-   2. Simple & Neat Hero Section
-   ========================================================================== */
+
 .contact-hero {
   background-color: #f8fafc;
   padding: 6rem 1.5rem 8rem;
    background-image: linear-gradient(
     to bottom,
-    rgba(9, 31, 104, 0.85), /* Your brand deep blue #091f68 at 85% opacity */
-    rgba(2, 6, 23, 0.95)    /* Fades into Slate 950 #020617 at 95% opacity at the bottom */
+    rgba(9, 31, 104, 0.85), 
+    rgba(2, 6, 23, 0.95)   
   ), 
   url('../assets/IMAGE_4.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
-  /* Flexbox Centering */
   display: flex;
   flex-direction: column;
   align-items: center;      
-  justify-content: center;  /* Centers content vertically if height is specified */
-  text-align: center;       /* Keeps text alignment centered */
-  
+  justify-content: center;  
+  text-align: center;       
   margin: 0 auto;
   width: 100%;
 }
@@ -42,7 +35,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #e2620d; /* High-quality burnt orange */
+  color: #e2620d; 
  
   padding: 0.35rem 0.85rem;
   border-radius: 4px;
@@ -51,7 +44,7 @@
 .hero-title {
   font-size: clamp(2.25rem, 5vw, 3.25rem);
   font-weight: 800;
-  color: #ffffff; /* Crisp deep brand blue */
+  color: #ffffff; 
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
@@ -67,15 +60,13 @@
   max-width: 700px;
 }
 
-/* ==========================================================================
-   3. Main Master Panel (Split Layout Grid)
-   ========================================================================== */
+
 .contact-container {
-  margin-top: -5rem; /* Neatly overlaps the hero container */
+  margin-top: -5rem; 
   position: relative;
   max-width: 1100px;
-  margin: 0 auto; /* Horizontally centers the container with no top overlap */
-  padding: 4rem 1.5rem; /* Balanced, clean spacing above and below the main panel */
+  margin: 0 auto; 
+  padding: 4rem 1.5rem; 
   position: relative;
   z-index: 10;
 }
@@ -93,9 +84,8 @@
   margin-bottom: 4rem;
 }
 
-/* ==========================================================================
-   4. Left Sidebar (Direct Details Card)
-   ========================================================================== */
+
+ 
 .contact-sidebar {
   background-color: #091f68;
   padding: 4rem 3rem;
@@ -229,9 +219,7 @@
   display: inline-block;
 }
 
-/* ==========================================================================
-   5. Right Side (Tactile Input Form)
-   ========================================================================== */
+
 .contact-form-panel {
   padding: 4rem;
   background: #ffffff;
@@ -281,7 +269,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Custom inputs (Using a real design system look instead of AI glow inputs) */
+
 .form-input,
 .form-textarea {
   width: 100%;
@@ -300,19 +288,19 @@
   min-height: 110px;
 }
 
-/* Native field state indicators (clean, tactile borders) */
+
 .form-input:focus,
 .form-textarea:focus {
   border-color: #e2620d;
   box-shadow: 0 0 0 3px rgba(226, 98, 13, 0.12);
 }
 
-/* Disable unused abstract bar lines */
+
 .input-focus-bar {
   display: none; 
 }
 
-/* Premium Button Architecture */
+
 .elite-submit-btn {
   display: inline-flex;
   align-items: center;
@@ -346,9 +334,7 @@
   transform: translate(2px, -2px);
 }
 
-/* ==========================================================================
-   6. Info Row Details (Direct Grid)
-   ========================================================================== */
+
 .info-details-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -361,8 +347,7 @@
   padding: 2.5rem 2rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.03);
-   
-  text-align: center;
+ text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -428,9 +413,7 @@
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
 }
 
-/* ==========================================================================
-   7. Dark Mode Integration (Clean & Seamless)
-   ========================================================================== */
+
 .dark .contact-page-section,
 .dark .contact-hero {
   background-color: #020617; /* Slate 950 */
@@ -438,7 +421,7 @@
 
 .dark .contact-master-panel,
 .dark .info-card {
-  background-color: #0b1329; /* Deep solid dark navy */
+  background-color: #0b1329;
   border-color: #1e293b;
 }
 
@@ -477,21 +460,19 @@
   color: #38bdf8 !important;
 }
 
-/* ==========================================================================
-   8. Map Wrapper Frame
-   ========================================================================== */
+
 .map-wrapper {
   width: 100%;
-  margin-top: auto; /* Pushes the map wrapper to the absolute bottom of the page if content is short */
+  margin-top: auto; 
   line-height: 0;
   border-top: 1px solid #e2e8f0;
   overflow: hidden;
 }
 
 .map-wrapper iframe {
-  display: block; /* Removes inline whitespace at the bottom of the iframe */
+  display: block;
   width: 100%;
-  height: 450px; /* Keep your desired height, or adjust as needed */
+  height: 450px; 
   margin: 0;
   padding: 0;
 }
@@ -502,9 +483,7 @@
   opacity: 0.6;
 }
 
-/* ==========================================================================
-   9. Mobile Responsiveness & Layout Refitting
-   ========================================================================== */
+
 @media (max-width: 992px) {
   .contact-master-panel {
     grid-template-columns: 1fr;
