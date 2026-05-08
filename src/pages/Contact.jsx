@@ -44,9 +44,7 @@ const Contact = () => {
 
   return (
     <section className="contact-page-section dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500">
-      
-    {/* Simple & Neat Hero Section */}
-<div className="contact-hero py-16 text-center px-4">
+      <div className="contact-hero py-16 text-center px-4">
   <div className="max-w-3xl mx-auto">
     <span className="hero-tagline inline-block text-xs font-bold uppercase tracking-widest text-[#FF6D00] bg-[#FF6D00]/10 px-3.5 py-1.5 rounded-full mb-4">
       Get In Touch
@@ -64,7 +62,7 @@ const Contact = () => {
         {/* Main Master Panel */}
         <div className="contact-master-panel">
           
-          {/* Elite Info/Visual Sidebar (Left) */}
+      
           <div className="contact-sidebar">
             <div className="sidebar-background-gradient"></div>
             
@@ -76,7 +74,7 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Quick Connect Items */}
+    
             <div className="sidebar-connect-list">
               <a href="mailto:support@homenet.co.ke" className="sidebar-connect-card">
                 <div className="icon-wrapper">
@@ -103,12 +101,12 @@ const Contact = () => {
 
             {/* Micro branding footer */}
             <div className="sidebar-footer">
-              <span className="pulse-indicator"></span>
+             
               <p>Average response time: &lt; 2 hours</p>
             </div>
           </div>
 
-          {/* Elite Premium Form (Right) */}
+        
           <div className="contact-form-panel">
             <div className="form-header">
               <h3>Submit a Request</h3>
@@ -183,7 +181,6 @@ const Contact = () => {
 
         </div>
 
-        {/* Info Cards (Bottom Row) */}
         <div className="info-details-row">
           <div className="info-card">
             <div className="info-card-icon-box">
