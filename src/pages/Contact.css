@@ -15,7 +15,12 @@
 .contact-hero {
   background-color: #f8fafc;
   padding: 6rem 1.5rem 8rem;
-   background-image: url('../assets/IMAGE_4.webp');
+   background-image: linear-gradient(
+    to bottom,
+    rgba(9, 31, 104, 0.85), /* Your brand deep blue #091f68 at 85% opacity */
+    rgba(2, 6, 23, 0.95)    /* Fades into Slate 950 #020617 at 95% opacity at the bottom */
+  ), 
+  url('../assets/IMAGE_4.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,7 +28,7 @@
   /* Flexbox Centering */
   display: flex;
   flex-direction: column;
-  align-items: center;      /* Centers content horizontally */
+  align-items: center;      
   justify-content: center;  /* Centers content vertically if height is specified */
   text-align: center;       /* Keeps text alignment centered */
   
