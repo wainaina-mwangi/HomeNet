@@ -147,3 +147,25 @@
   .newsletter-form { width: 100%; }
   .newsletter-form input { flex: 1; }
 }
+
+@media (max-width: 375px) {
+  
+ 
+.newsletter-form {
+  background: var(--glass);
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+}
+
+.newsletter-form input {
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1rem;
+  color: white;
+  outline: none;
+  min-width: 150px;
+}
+ 
+}
