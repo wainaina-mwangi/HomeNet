@@ -20,7 +20,7 @@ const Navbar = () => {
             <IoWifi className="text-brand-orange group-hover:text-white text-2xl transition-colors" />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="nav-logo-text dark-white text-xl font-black tracking-tighter">
+            <span className="nav-logo-text dark:text-white text-xl font-black tracking-tighter">
               Home<span className="text-brand-orange">Net</span>
             </span>
             <span className="nav-subtext text-[10px] uppercase tracking-[0.2em] font-bold">
