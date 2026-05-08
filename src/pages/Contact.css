@@ -55,8 +55,14 @@
 .contact-container {
   margin-top: -5rem; /* Neatly overlaps the hero container */
   position: relative;
+  max-width: 1100px;
+  margin: 0 auto; /* Horizontally centers the container with no top overlap */
+  padding: 4rem 1.5rem; /* Balanced, clean spacing above and below the main panel */
+  position: relative;
   z-index: 10;
 }
+
+
 
 .contact-master-panel {
   display: grid;
