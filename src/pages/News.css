@@ -105,11 +105,11 @@
 }
 
 .news-hero p{
-width: 400px;
+width: 300px;
 display: inline-flex;
 align-items: center;
 color: #ffffff;
- font-size:0.6rem;
+
 }
 
 }
