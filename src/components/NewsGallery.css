@@ -181,6 +181,126 @@
 }
 
 /* ==========================================================================
+   LiveStats Dashboard Layout
+   ========================================================================== */
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Individual Stat Cards */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+/* Big Bold Metric Typography */
+.stat-number {
+  font-size: clamp(2.5rem, 4vw, 3.5rem); /* Dynamically scales text perfectly */
+  font-weight: 800;
+  color: #091f68; /* Brand Navy */
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+/* Accent Suffix (%, +) styling */
+.stat-number span + text, 
+.stat-number::after {
+  color: #FF6D00; /* Brand Orange for metric units */
+  margin-left: 1px;
+}
+
+/* Sub-labels below metrics */
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b; /* Sleek slate gray */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Clean, modern vertical divider lines */
+.stat-divider {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 232, 240, 0) 0%,
+    rgba(226, 232, 240, 1) 50%,
+    rgba(226, 232, 240, 0) 100%
+  );
+}
+
+/* ==========================================================================
+   Dark Mode Integrations
+   ========================================================================== */
+.dark .stat-number {
+  color: #ffffff;
+  /* Soft typographic glow to pop on dark mode background */
+  text-shadow: 0 0 40px rgba(56, 189, 248, 0.1); 
+}
+
+.dark .stat-label {
+  color: #94a3b8;
+}
+
+.dark .stat-divider {
+  background: linear-gradient(
+    to bottom,
+    rgba(51, 65, 85, 0) 0%,
+    rgba(51, 65, 85, 1) 50%,
+    rgba(51, 65, 85, 0) 100%
+  );
+}
+
+/* ==========================================================================
+   Responsive Mobile Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* Hide vertical lines when content is stacked vertically */
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Add simple horizontal divider below stacked items (except the last one) */
+  .stat-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: radial-gradient(circle, rgba(226,232,240,1) 0%, rgba(226,232,240,0) 100%);
+  }
+
+  .dark .stat-item:not(:last-child)::after {
+    background: radial-gradient(circle, rgba(51,65,85,1) 0%, rgba(51,65,85,0) 100%);
+  }
+}
+
+/* ==========================================================================
    Mobile Responsive Tweak
    ========================================================================== */
 @media (max-width: 640px) {
