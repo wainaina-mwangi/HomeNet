@@ -403,7 +403,7 @@
 
 .info-card:hover {
   border-color: #cbd5e1;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
 }
 
 /* ==========================================================================
@@ -461,6 +461,7 @@
 .map-wrapper {
   line-height: 0;
   border-top: 1px solid #e2e8f0;
+   max-width:100vh;
 }
 
 .dark .map-wrapper {
@@ -510,7 +511,6 @@
     gap: 1.75rem;
   }
 
-  /* Overrides auto-zoom issues on mobile screens */
   .form-input,
   .form-textarea {
     font-size: 16px;
