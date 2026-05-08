@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. Root Layout Containers
-   ========================================================================== */
+
 .news-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -8,9 +6,7 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ==========================================================================
-   2. Asymmetrical Editorial Gallery Grid
-   ========================================================================== */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -18,7 +14,7 @@
   margin-bottom: 5rem;
 }
 
-/* Base Card Styles */
+
 .gallery-card {
   position: relative;
   height: 380px;
@@ -27,23 +23,25 @@
   cursor: pointer;
   background-color: #020617; /* High contrast base color */
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.3s ease;
 }
 
-/* Dynamic grid spanning variations (Asymmetric layout) */
+
 .gallery-card.card-featured {
   grid-row: span 2;
-  height: calc(760px + 1.5rem); /* Flawlessly matches two stacked rows plus gap */
+  height: calc(760px + 1.5rem); 
 }
 
 .gallery-card.card-wide {
   grid-column: span 2;
 }
 
-/* Image wrappers and effects */
+
 .img-wrapper {
   width: 100%;
   height: 100%;
@@ -59,13 +57,13 @@
   filter: grayscale(0.1) contrast(1.05);
 }
 
-/* Subtle, solid, and non-cluttered gradient overlay for text readability */
+
 .card-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(9, 31, 104, 0.95) 0%,   /* Brand Blue at the bottom */
+    rgba(9, 31, 104, 0.95) 0%,   
     rgba(9, 31, 104, 0.4) 60%,
     rgba(2, 6, 23, 0.1) 100%
   );
@@ -100,12 +98,12 @@
   transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Featured card font adjustment */
+
 .gallery-card.card-featured .card-overlay h3 {
   font-size: 1.75rem;
 }
 
-/* Hover Physics */
+
 .gallery-card:hover {
   transform: translateY(-4px);
   border-color: #FF6D00;
@@ -125,30 +123,20 @@
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   Modernized Stats Wrapper Section
-   ========================================================================== */
+
 .stats-wrapper-section {
   position: relative;
   padding: 4.5rem 2rem;
   margin: 6rem 0;
-  
-  /* Modern clean slate container */
-  background: rgba(248, 250, 252, 0.6); /* Semi-transparent Slate 50 */
+  background: rgba(248, 250, 252, 0.6); 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  
-  /* Tactile, thin-profile borders instead of flat lines */
   border-top: 1px solid rgba(226, 232, 240, 0.8);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   border-radius: 16px;
-  
-  /* Deep, natural ambient shadow to make the section pop smoothly */
   box-shadow: 
     0 4px 30px rgba(15, 23, 42, 0.015),
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  
-  /* Smooth alignment transition */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,7 +144,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Accent decorative corner bracket to indicate modern "live data" monitoring */
+
 .stats-wrapper-section::before {
   content: "";
   position: absolute;
@@ -164,13 +152,11 @@
   left: 2rem;
   width: 40px;
   height: 2px;
-  background-color: #FF6D00; /* Subtle orange brand accent marker */
+  background-color: #FF6D00; 
   border-radius: 99px;
 }
 
-/* ==========================================================================
-   Dark Mode Integration
-   ========================================================================== */
+
 .dark .stats-wrapper-section {
   background: rgba(11, 19, 41, 0.45); /* Refined deep navy */
   border-top-color: rgba(30, 41, 59, 0.7);
@@ -180,9 +166,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================================================================
-   LiveStats Dashboard Layout
-   ========================================================================== */
+
 .stats-container {
   display: flex;
   align-items: center;
@@ -193,7 +177,7 @@
   position: relative;
 }
 
-/* Individual Stat Cards */
+
 .stat-item {
   display: flex;
   flex-direction: column;
@@ -202,11 +186,11 @@
   flex: 1;
 }
 
-/* Big Bold Metric Typography */
+
 .stat-number {
-  font-size: clamp(2.5rem, 4vw, 3.5rem); /* Dynamically scales text perfectly */
+  font-size: clamp(2.5rem, 4vw, 3.5rem); 
   font-weight: 800;
-  color: #091f68; /* Brand Navy */
+  color: #091f68; 
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -214,24 +198,24 @@
   align-items: baseline;
 }
 
-/* Accent Suffix (%, +) styling */
+
 .stat-number span + text, 
 .stat-number::after {
-  color: #FF6D00; /* Brand Orange for metric units */
+  color: #FF6D00; 
   margin-left: 1px;
 }
 
-/* Sub-labels below metrics */
+
 .stat-label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #64748b; /* Sleek slate gray */
+  color: #64748b; 
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin: 0;
 }
 
-/* Clean, modern vertical divider lines */
+
 .stat-divider {
   width: 1px;
   height: 50px;
@@ -243,12 +227,9 @@
   );
 }
 
-/* ==========================================================================
-   Dark Mode Integrations
-   ========================================================================== */
+
 .dark .stat-number {
   color: #ffffff;
-  /* Soft typographic glow to pop on dark mode background */
   text-shadow: 0 0 40px rgba(56, 189, 248, 0.1); 
 }
 
@@ -265,16 +246,14 @@
   );
 }
 
-/* ==========================================================================
-   Responsive Mobile Adjustments
-   ========================================================================== */
+
 @media (max-width: 768px) {
   .stats-container {
     flex-direction: column;
     gap: 3rem;
   }
 
-  /* Hide vertical lines when content is stacked vertically */
+ 
   .stat-divider {
     display: none;
   }
@@ -284,7 +263,7 @@
     width: 100%;
   }
 
-  /* Add simple horizontal divider below stacked items (except the last one) */
+  
   .stat-item:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -300,14 +279,12 @@
   }
 }
 
-/* ==========================================================================
-   Mobile Responsive Tweak
-   ========================================================================== */
+
 @media (max-width: 640px) {
   .stats-wrapper-section {
     padding: 3rem 1rem;
     margin: 4rem 0;
-    border-radius: 0; /* Bleeds flat to screen edge on mobile */
+    border-radius: 0; 
     border-left: none;
     border-right: none;
   }
@@ -317,11 +294,9 @@
   }
 }
 
-/* ==========================================================================
-   4. Clean Modern Footer Call-To-Action (CTA)
-   ========================================================================== */
+
 .footer-cta {
-  background-color: #091f68; /* Solid, premium deep blue background */
+  background-color: #091f68; 
   padding: 5rem 3rem;
   border-radius: 12px;
   text-align: center;
@@ -348,7 +323,7 @@
 
 .mail-button {
   display: inline-block;
-  background-color: #FF6D00; /* Vibrant Orange Brand Accent */
+  background-color: #FF6D00; 
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
@@ -363,9 +338,7 @@
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   5. Tactile, Immersive Lightbox Modal
-   ========================================================================== */
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -455,9 +428,7 @@
   }
 }
 
-/* ==========================================================================
-   6. Dark Mode Structural Sync
-   ========================================================================== */
+
 .dark .gallery-card {
   border-color: #1e293b;
   background-color: #0b1329;
@@ -493,9 +464,7 @@
   color: #ffffff;
 }
 
-/* ==========================================================================
-   7. Device Layout Adapters (Responsiveness)
-   ========================================================================== */
+
 @media (max-width: 992px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
