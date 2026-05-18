@@ -1,4 +1,4 @@
-/* Dark Mode Variable Mapping */
+
 .dark {
   --footer-bg: #2a2d9b;
   --accent-orange: #ff6d00;
@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 
-/* Appends background color behavior when .dark class is on the html/body element */
+
 .dark .process-section {
   background-color: var(--card-bg);
 }
@@ -39,7 +39,7 @@
   text-transform: uppercase;
 }
 
-/* Switches subtitle color to your exact orange variable in dark mode */
+
 .dark .process-subtitle {
   color: var(--accent-orange);
 }
@@ -61,7 +61,7 @@
   font-size: 1.1rem;
 }
 
-/* Dims down description text readability slightly in dark mode */
+
 .dark .process-description {
   color: var(--text-dim);
   opacity: 1;
@@ -77,7 +77,7 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-/* Implements your glassmorphism glass variable when active */
+
 .dark .process-right-card {
   background: var(--glass);
 }
@@ -112,7 +112,7 @@
   letter-spacing: 1px;
 }
 
-/* Switches step index headers to the custom accent orange */
+
 .dark .step-label {
   color: var(--accent-orange);
 }
@@ -130,7 +130,7 @@
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* Uses your custom deep blue/purple variable for step bubbles */
+
 .dark .step-circle {
   background: var(--footer-bg);
 }
@@ -148,7 +148,7 @@
   line-height: 1.5;
 }
 
-/* Adapts content paragraph text elements under dark mode rules */
+
 .dark .step-content p {
   color: var(--text-dim);
   opacity: 1;
