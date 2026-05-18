@@ -1,9 +1,24 @@
+/* Dark Mode Variable Mapping */
+.dark {
+  --footer-bg: #2a2d9b;
+  --accent-orange: #ff6d00;
+  --text-dim: #94a3b8;
+  --glass: rgba(255, 255, 255, 0.03);
+  --input-bg: transparent;
+  --card-bg: transparent;
+}
+
 .process-section {
   background-color: transparent; 
   padding: 0; 
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
+}
+
+/* Appends background color behavior when .dark class is on the html/body element */
+.dark .process-section {
+  background-color: var(--card-bg);
 }
 
 .process-container {
@@ -16,14 +31,17 @@
   padding: 0 20px; 
 }
 
-
-
 .process-subtitle {
   color: #FF6630; 
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+/* Switches subtitle color to your exact orange variable in dark mode */
+.dark .process-subtitle {
+  color: var(--accent-orange);
 }
 
 .process-title {
@@ -43,6 +61,11 @@
   font-size: 1.1rem;
 }
 
+/* Dims down description text readability slightly in dark mode */
+.dark .process-description {
+  color: var(--text-dim);
+  opacity: 1;
+}
 
 .process-right-card {
   background: rgba(255, 255, 255, 0.07); 
@@ -52,6 +75,11 @@
   padding: 45px;
   border-radius: 40px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Implements your glassmorphism glass variable when active */
+.dark .process-right-card {
+  background: var(--glass);
 }
 
 .step-item {
@@ -84,6 +112,11 @@
   letter-spacing: 1px;
 }
 
+/* Switches step index headers to the custom accent orange */
+.dark .step-label {
+  color: var(--accent-orange);
+}
+
 .step-circle {
   width: 55px;
   height: 55px;
@@ -95,6 +128,11 @@
   font-size: 24px;
   font-weight: 900;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Uses your custom deep blue/purple variable for step bubbles */
+.dark .step-circle {
+  background: var(--footer-bg);
 }
 
 .step-content h3 {
@@ -110,12 +148,17 @@
   line-height: 1.5;
 }
 
+/* Adapts content paragraph text elements under dark mode rules */
+.dark .step-content p {
+  color: var(--text-dim);
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
   .process-container {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 
 @media (max-width: 480px) {
   .process-right-card {
