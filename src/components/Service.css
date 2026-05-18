@@ -61,12 +61,12 @@
 }
 
 
-/* .service-card::after {
+.service-card::after {
   content: "•";
   color: rgba(255, 255, 255, 0.3);
   margin-left: 4rem;
-  font-size: 1.2rem;
-} */
+  font-size: 2rem;
+}
 
 
 @keyframes scrollMarquee {
