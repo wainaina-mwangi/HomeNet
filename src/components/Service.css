@@ -1,4 +1,13 @@
 
+.dark {
+  --footer-bg: #2a2d9b;
+  --accent-orange: #ff6d00;
+  --text-dim: #94a3b8;
+  --glass: rgba(255, 255, 255, 0.03);
+  --input-bg: transparent;
+  --card-bg: transparent;
+}
+
 .services-container {
   overflow: hidden;
   width: 100%;
@@ -9,11 +18,16 @@
 }
 
 
+.dark .services-container {
+  background: var(--card-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .marquee-track {
   display: flex;
   width: max-content;
 }
-
 
 .marquee-group {
   display: flex;
@@ -23,11 +37,9 @@
   animation: scrollMarquee 25s linear infinite;
 }
 
-
 .services-container:hover .marquee-group {
   animation-play-state: paused;
 }
-
 
 .service-card {
   display: flex;
@@ -43,14 +55,12 @@
   opacity: 0.8;
 }
 
-
 .service-icon {
   font-size: 3rem;
   color: #00d4ff;
   display: flex;
   align-items: center;
 }
-
 
 .service-text {
   font-size: 0.85rem;
@@ -61,6 +71,10 @@
 }
 
 
+.dark .service-text {
+  color: var(--text-dim);
+}
+
 .service-card::after {
   content: "•";
   color: rgba(255, 255, 255, 0.3);
@@ -68,6 +82,10 @@
   font-size: 2rem;
 }
 
+
+.dark .service-card::after {
+  color: rgba(148, 163, 184, 0.3); 
+}
 
 @keyframes scrollMarquee {
   0% {
