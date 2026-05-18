@@ -10,7 +10,7 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden dark:bg-yellow">
+    <div className="overflow-hidden">
       <Hero />
       <Services />
       <About />
