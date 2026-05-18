@@ -1,37 +1,37 @@
-/* Container holds everything and clips the overflow text seamlessly */
+
 .services-container {
   overflow: hidden;
   width: 100%;
   display: flex;
   background: linear-gradient(70deg, #3a41c6 0%, #343ab8 100%); 
-  padding: 30px 0; /* Adjusted slightly for a tighter marquee ribbon look */
+  padding: 30px 6px; 
   align-items: center;
 }
 
-/* The invisible track holding the duplicate groups side-by-side */
+
 .marquee-track {
   display: flex;
   width: max-content;
 }
 
-/* The moving element blocks */
+
 .marquee-group {
   display: flex;
   align-items: center;
-  gap: 4rem; /* Spacing between your different services */
-  padding-right: 4rem; /* Keeps the loop gap identical at the seam */
+  gap: 4rem; 
+  padding-right: 4rem; 
   animation: scrollMarquee 25s linear infinite;
 }
 
-/* Pauses the ribbon movement completely when your user hovers */
+
 .services-container:hover .marquee-group {
   animation-play-state: paused;
 }
 
-/* Refined service cards to sit beautifully in a horizontal track */
+
 .service-card {
   display: flex;
-  flex-direction: row; /* Icon and text sit perfectly side-by-side */
+  flex-direction: row; 
   align-items: center;
   gap: 12px;
   color: white;
@@ -43,32 +43,32 @@
   opacity: 0.8;
 }
 
-/* Your original icon size and color tokens */
+
 .service-icon {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #00d4ff;
   display: flex;
   align-items: center;
 }
 
-/* Your original font parameters and tracking variables */
+
 .service-text {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  white-space: nowrap; /* Ensures text never breaks into two lines */
+  white-space: nowrap; 
 }
 
-/* Add a sleek modern divider dot between items for continuous tracking */
-.service-card::after {
+
+/* .service-card::after {
   content: "•";
   color: rgba(255, 255, 255, 0.3);
   margin-left: 4rem;
   font-size: 1.2rem;
-}
+} */
 
-/* GPU-accelerated keyframe logic for zero-lag performance */
+
 @keyframes scrollMarquee {
   0% {
     transform: translateX(0);
@@ -78,7 +78,7 @@
   }
 }
 
-/* Responsive adjustments for mobile viewports */
+
 @media (max-width: 768px) {
   .services-container {
     padding: 20px 0;
@@ -86,7 +86,7 @@
   .marquee-group {
     gap: 2.5rem;
     padding-right: 2.5rem;
-    animation-duration: 18s; /* Makes it scroll a bit more dynamically on smaller screens */
+    animation-duration: 18s; 
   }
   .service-card::after {
     margin-left: 2.5rem;
