@@ -20,7 +20,7 @@ const TopNavbar = () => {
     >
   
       <div className="flex items-center gap-8">
-        {/* Customer Care Box */}
+       
         <div className="group flex items-center gap-3">
           <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-200 transition-all duration-300
                           group-hover:border-brand-orange/30 group-hover:bg-brand-orange/5 
@@ -31,17 +31,13 @@ const TopNavbar = () => {
             <span className="text-[10px] uppercase tracking-wider text-slate-400 font-bold dark:text-slate-500">Customer Care</span>
             <a
               href="tel:+254793888552"
-              className="font-bold transition-colors text-slate-800 hover:text-brand-orange dark:text-slate-100 dark:hover:text-brand-orange"
+              className="font-bold transition-colors text-slate-400 hover:text-brand-orange dark:text-slate-100 dark:hover:text-brand-orange"
             >
               +254 793 888 552
             </a>
           </div>
         </div>
-        
-        {/* Vertical Divider Line */}
         <div className="h-6 w-[1px] bg-slate-300 dark:bg-white/10" />
-        
-        {/* Location Box */}
         <div className="group flex items-center gap-3">
           <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-sm border border-slate-200 transition-all duration-300
                           group-hover:border-brand-orange/30 group-hover:bg-brand-orange/5 
@@ -50,7 +46,7 @@ const TopNavbar = () => {
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-[10px] uppercase tracking-wider text-slate-400 font-bold dark:text-slate-500">Location</span>
-            <span className="font-bold text-slate-800 dark:text-slate-100">LuckySummer, Nairobi</span>
+            <span className="font-bold text-slate-400 dark:text-slate-100">LuckySummer, Nairobi</span>
           </div>
         </div>
       </div>
