@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLoader } from "react-spinners";
+import {BarLoader } from "react-spinners";
 
 const Loader = () => (
   <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-brand-navy backdrop-blur-sm">
