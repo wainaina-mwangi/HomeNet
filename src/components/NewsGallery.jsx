@@ -40,12 +40,18 @@ const localGallery = [
     title: "Community Growth",
     desc: "When you browse, they learn. Together, we build a smarter tomorrow.",
   },
+  {
+    id: 7,
+    src: "/images/IMPACT_8.jpg",
+    title: "Community Growth",
+    desc: "When you browse, they learn. Together, we build a smarter tomorrow.",
+  },
 ];
 
 export const CoolGallery = () => {
   const [activeImg, setActiveImg] = useState(null);
 
-  // Helper to assign asymmetric editorial layout classes
+
   const getLayoutClass = (id) => {
     if (id === 1) return "gallery-card card-featured";
     if (id === 4) return "gallery-card card-wide";
@@ -91,7 +97,7 @@ export const CoolGallery = () => {
         </div>
       </div>
 
-      {/* Minimalist Tactile Lightbox */}
+     
       {activeImg && (
         <div className="lightbox" onClick={() => setActiveImg(null)}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
