@@ -43,8 +43,8 @@ const localGallery = [
   {
     id: 7,
     src: "/images/IMAGE_8.jpg",
-    title: "Community Growth",
-    desc: "When you browse, they learn. Together, we build a smarter tomorrow.",
+    title: "Rooted in Nairobi",
+    desc: "We don’t just supply internet to your buildings; we live and work alongside you. homeNet was built to provide the families, students, businesses, and creators of Lucky Summer with a dependable digital backbone. By hiring local technicians and keeping our support teams stationed right within the neighborhood, we ensure that whenever you need us, your solutions are minutes away. When our community connects, it thrives.",
   },
 ];
 
