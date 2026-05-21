@@ -42,7 +42,7 @@ const localGallery = [
   },
   {
     id: 7,
-    src: "/images/IMPACT_8.jpg",
+    src: "/images/IMAGE_8.jpg",
     title: "Community Growth",
     desc: "When you browse, they learn. Together, we build a smarter tomorrow.",
   },
