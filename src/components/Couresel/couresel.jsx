@@ -50,7 +50,7 @@ const Couresel = () => {
           <li
             className={`transition-all duration-300 ease-in-out cursor-pointer rounded-full ${
               isSelected 
-                ? "w-10 h-3 bg-brand-orange" 
+                ? "w-10 h-5 bg-brand-orange" 
                 : "w-3 h-3 bg-white/40 hover:bg-white/70"
             }`}
             onClick={onClickHandler}
@@ -74,7 +74,7 @@ const Couresel = () => {
             initial="hidden"
             whileInView="visible"
             variants={staggerContainer}
-            className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-slate-900/60 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
+            className="absolute inset-0 bg-gradient-to-l from-blue-900/90 via-slate-900/60 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
             <motion.h1
               variants={fadeInUp}
