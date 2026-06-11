@@ -23,7 +23,7 @@ const Couresel = () => {
   };
 
   return (
-    <div className="carousel-wrapper hero-wrapper w-full relative overflow-hidden mx-4 md:mx-auto mt-6 md:mt-5 rounded">
+    <div className="carousel-wrapper hero-wrapper w-full relative overflow-hidden mx-4 md:mx-auto mt-6 md:mt-5">
       
       <style>{`
         .main-carousel .control-dots {
@@ -50,7 +50,7 @@ const Couresel = () => {
           <li
             className={`transition-all duration-300 ease-in-out cursor-pointer rounded-full ${
               isSelected 
-                ? "w-13 h-3 bg-brand-orange" 
+                ? "w-13 h-2 bg-brand-orange" 
                 : "w-3 h-3 bg-white/40 hover:bg-white/70"
             }`}
             onClick={onClickHandler}
