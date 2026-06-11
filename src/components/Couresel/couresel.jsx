@@ -48,10 +48,10 @@ const Couresel = () => {
         className="main-carousel"
         renderIndicator={(onClickHandler, isSelected, index, label) => (
           <li
-            className={`transition-all duration-300 ease-in-out cursor-pointer  ${
+            className={`transition-all duration-300 ease-in-out cursor-pointer rounded-full ${
               isSelected 
-                ? "w-13 h-2 bg-brand-orange" 
-                : "w-3 h-3 bg-white/40 hover:bg-white/70 rounded-full "
+                ? "w-10 h-3 bg-brand-orange" 
+                : "w-3 h-3 bg-white/40 hover:bg-white/70  "
             }`}
             onClick={onClickHandler}
             onKeyDown={onClickHandler}
