@@ -74,7 +74,7 @@ const Couresel = () => {
             initial="hidden"
             whileInView="visible"
             variants={staggerContainer}
-            className="absolute inset-0 bg-gradient-to-l from-blue-900/90 via-slate-900/60 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
+            className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-slate-900/90 to-transparent flex flex-col justify-center items-center text-center px-4 md:px-6"
           >
             <motion.h1
               variants={fadeInUp}
