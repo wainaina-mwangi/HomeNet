@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-
 
 const CORNER_ARCS = [
   
@@ -40,8 +38,9 @@ const CornerArc = ({ d, delay, opacity, strokeWidth = 2 }) => (
 );
 
 const Loader = () => (
-  <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-brand-navy backdrop-blur-sm">
-   {/* Scan lines */}
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-brand-orange overflow-hidden">
+
+    {/* Scan lines */}
     <motion.div
       className="absolute w-full h-px bg-white/25"
       animate={{ y: ["-100px", "100px"], opacity: [0, 0.25, 0] }}
@@ -122,21 +121,28 @@ const Loader = () => (
         />
       ))}
 
+      {/* orbit close */}
       <motion.div className="absolute" style={{ originX: "50%", originY: "50%" }}
         animate={{ rotate: 360 }}
         transition={{ duration: 2.2, repeat: Infinity, ease: "linear" }}>
         <div className="w-3 h-3 rounded-full bg-white" style={{ transform: "translateX(42px)" }} />
       </motion.div>
+
+      {/* orbit far */}
       <motion.div className="absolute"
         animate={{ rotate: -360 }}
         transition={{ duration: 3.4, repeat: Infinity, ease: "linear" }}>
         <div className="w-2 h-2 rounded-full bg-white/60" style={{ transform: "translateX(60px)" }} />
       </motion.div>
+
+      {/* core */}
       <motion.div className="w-5 h-5 rounded-full bg-white"
         animate={{ scale: [1, 1.4, 1], opacity: [1, 0.7, 1] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
       />
     </div>
+
+    {/* Label */}
     <motion.p
       className="absolute bottom-12 text-[11px] tracking-[0.22em] uppercase font-medium text-white/70"
       animate={{ opacity: [0.3, 1, 0.3] }}
@@ -144,7 +150,6 @@ const Loader = () => (
     >
       Connecting
     </motion.p>
-
   </div>
 );
 
