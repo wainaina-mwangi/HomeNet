@@ -33,11 +33,11 @@ const Loader = () => {
       </div>
 
       <motion.p
-        className="absolute top-13 text-xs tracking-[0.25em] uppercase font-bold text-white text-center px-4"
+        className="mt-8 text-2xl font-semibold text-white text-xs tracking-[0.25em] uppercase  text-white text-center px-4"
         animate={{ opacity: [0.4, 1, 0.4] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        Welcome to HomeNet...
+     Welcome to HomeNet...
       </motion.p>
       
     </div>
