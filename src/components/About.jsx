@@ -9,9 +9,7 @@ const About = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -58,7 +56,7 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Side Image Column with Cool Shape and Ambient Glow */}
+        {/* Right Side Image Column: Version 1 (Angled Tech Slice) */}
         <motion.div
           className="about-image relative flex justify-center items-center"
           initial={{ opacity: 0, x: 50 }}
@@ -66,37 +64,29 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          
-          {/* Background Gradient Ring 1 — Smooth Floating Morph Mask */}
-          <motion.div 
-            className="absolute w-[85%] h-[85%] bg-gradient-to-tr from-brand-orange/30 to-blue-500/20 blur-2xl rounded-full"
-            animate={{
-              scale: [1, 1.08, 1],
-              rotate: [0, 90, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-
-          {/* Background Accent Shape 2 — Soft Sharp Contrast */}
-          <div className="absolute inset-0 border border-white/10 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] scale-105 pointer-events-none hidden md:block" />
+          {/* Background Ambient Glow */}
+          <div className="absolute w-4/5 h-4/5 bg-brand-orange/20 rounded-full blur-3xl opacity-60" />
 
           {/* Core Masked Frame Container */}
-          <div className="relative w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden shadow-2xl transition duration-500 group
-                          rounded-[30%_70%_70%_30%_/_30%_40%_60%_70%] hover:rounded-[40%_60%_50%_50%_/_50%_30%_70%_50%]">
-            
+          <div 
+            className="relative w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden shadow-2xl transition duration-500 group border border-white/10"
+            style={{ clipPath: "polygon(12% 0%, 100% 0%, 100% 88%, 88% 100%, 0% 100%, 0% 12%)" }}
+          >
             {/* The Image itself */}
             <img 
               src={image_5} 
               alt="Our team working on technology" 
-              className="w-full h-full object-cover scale-105 group-hover:scale-100 transition duration-700 ease-out"
+              className="w-full h-full object-cover scale-105 group-hover:scale-110 transition duration-700 ease-out"
             />
             
-            {/* Fine overlay overlay scrim inside the custom frame boundary */}
+            {/* Dark overlay scrim */}
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent pointer-events-none" />
+            
+            {/* Inner Border Sync */}
+            <div 
+              className="absolute inset-0 border border-white/20 pointer-events-none" 
+              style={{ clipPath: "polygon(12% 0%, 100% 0%, 100% 88%, 88% 100%, 0% 100%, 0% 12%)" }}
+            />
           </div>
 
         </motion.div>
