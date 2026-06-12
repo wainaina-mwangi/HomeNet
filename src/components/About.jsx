@@ -63,20 +63,16 @@ const About = () => {
         >
          
           <div className="absolute -bottom-2 -left-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square border-2 border-brand-white/30 rounded-2xl pointer-events-none hidden sm:block transform -translate-x-4 translate-y-4" />
-
-          {/* Underlay Decorative Frame 2 (Deep Slate Offset) */}
+    
           <div className="absolute -top-2 -right-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square bg-white/5 rounded-2xl pointer-events-none hidden sm:block transform translate-x-4 -translate-y-4" />
-
-          {/* Core Masked Frame Container */}
           <div className="relative w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden shadow-2xl rounded-2xl border border-white/10 group bg-brand-navy-light">
-            {/* The Image itself */}
+         
             <img 
               src={image_5} 
               alt="Our team working on technology" 
               className="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition duration-700 ease-out"
             />
             
-            {/* Vignette Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-brand-navy/20 pointer-events-none" />
           </div>
 
