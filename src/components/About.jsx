@@ -14,21 +14,39 @@ const About = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
+    hidden: { opacity: 0, y: 25 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
   return (
-    <section className="about-section bg-brand-navy overflow-hidden py-16 md:py-24">
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    // Section wrapper turns relative to host the background layout sequence
+    <section className="about-section relative bg-brand-navy overflow-hidden py-20 md:py-32 min-h-[550px] flex items-center">
+      
+      {/* 1. Full-Canvas Background Image Layer */}
+      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+        <img 
+          src={image_5} 
+          alt="Our team working on technology layout background" 
+          className="w-full h-full object-cover object-center lg:object-right opacity-80 lg:opacity-100"
+        />
+        {/* Ambient base dark tint to prevent background image bleed */}
+        <div className="absolute inset-0 bg-black/30 lg:bg-transparent" />
+      </div>
+
+      {/* 2. Left-to-Right Horizontal Gradient Scrim Layer */}
+      {/* Acts as a protective barrier ensuring text has stellar contrast */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-brand-navy via-brand-navy/95 sm:via-brand-navy/85 to-transparent w-full lg:w-[65%]" />
+
+      {/* 3. The Content Layer container (Z-indexed securely over background fields) */}
+      <div className="container mx-auto px-6 relative z-20 grid grid-cols-1 lg:grid-cols-2 items-center">
         
-        {/* Left Side Content Column */}
+        {/* Content Column wrapper */}
         <motion.div
-          className="about-content"
+          className="about-content max-w-xl"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -38,52 +56,27 @@ const About = () => {
             Who We Are
           </motion.span>
 
-          <motion.h2 variants={itemVariants} className="title text-3xl md:text-4xl font-extrabold text-white mb-6">
+          <motion.h2 variants={itemVariants} className="title text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
             Empowering people through technology
           </motion.h2>
 
-          <motion.p variants={itemVariants} className="description text-gray-300 mb-8 leading-relaxed">
+          <motion.p variants={itemVariants} className="description text-gray-200 mb-8 leading-relaxed text-base md:text-lg">
             Fast, affordable, and built for our community. We provide reliable residential internet backed by round-the-clock support and a commitment to keeping local neighborhoods connected to global opportunities.
           </motion.p>
 
           <motion.div variants={itemVariants}>
             <Link
               to="/plans"
-              className="btn font-bold bg-brand-orange hover:bg-brand-orange/80 text-white px-6 py-3 rounded-md transition dynamic-shadow"
+              className="btn font-bold bg-brand-orange hover:bg-brand-orange/80 text-white px-8 py-3.5 rounded-md transition dynamic-shadow inline-block"
             >
               Sign Up Now
             </Link>
           </motion.div>
         </motion.div>
 
-        {/* Right Side Image Column: Version 2 (Overlapping Depth Frames) */}
-        <motion.div
-          className="about-image relative flex justify-center items-center p-8"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          {/* Underlay Decorative Frame 1 (Orange Border Offset) */}
-          <div className="absolute -bottom-2 -left-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square border-2 border-brand-orange/30 rounded-2xl pointer-events-none hidden sm:block transform -translate-x-4 translate-y-4" />
-
-          {/* Underlay Decorative Frame 2 (Deep Slate Offset) */}
-          <div className="absolute -top-2 -right-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square bg-white/5 rounded-2xl pointer-events-none hidden sm:block transform translate-x-4 -translate-y-4" />
-
-          {/* Core Masked Frame Container */}
-          <div className="relative w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden shadow-2xl rounded-2xl border border-white/10 group bg-brand-navy-light">
-            {/* The Image itself */}
-            <img 
-              src={image_5} 
-              alt="Our team working on technology" 
-              className="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition duration-700 ease-out"
-            />
-            
-            {/* Vignette Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-brand-navy/20 pointer-events-none" />
-          </div>
-
-        </motion.div>
+        {/* Empty Column right side handles fluid balance since background fills it */}
+        <div className="hidden lg:block h-1" />
+        
       </div>
     </section>
   );
