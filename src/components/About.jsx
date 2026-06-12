@@ -56,37 +56,31 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Side Image Column: Version 1 (Angled Tech Slice) */}
+        {/* Right Side Image Column: Version 2 (Overlapping Depth Frames) */}
         <motion.div
-          className="about-image relative flex justify-center items-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="about-image relative flex justify-center items-center p-8"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          {/* Background Ambient Glow */}
-          <div className="absolute w-4/5 h-4/5 bg-brand-orange/20 rounded-full blur-3xl opacity-60" />
+          {/* Underlay Decorative Frame 1 (Orange Border Offset) */}
+          <div className="absolute -bottom-2 -left-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square border-2 border-brand-orange/30 rounded-2xl pointer-events-none hidden sm:block transform -translate-x-4 translate-y-4" />
+
+          {/* Underlay Decorative Frame 2 (Deep Slate Offset) */}
+          <div className="absolute -top-2 -right-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square bg-white/5 rounded-2xl pointer-events-none hidden sm:block transform translate-x-4 -translate-y-4" />
 
           {/* Core Masked Frame Container */}
-          <div 
-            className="relative w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden shadow-2xl transition duration-500 group border border-white/10"
-            style={{ clipPath: "polygon(12% 0%, 100% 0%, 100% 88%, 88% 100%, 0% 100%, 0% 12%)" }}
-          >
+          <div className="relative w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square overflow-hidden shadow-2xl rounded-2xl border border-white/10 group bg-brand-navy-light">
             {/* The Image itself */}
             <img 
               src={image_5} 
               alt="Our team working on technology" 
-              className="w-full h-full object-cover scale-105 group-hover:scale-110 transition duration-700 ease-out"
+              className="w-full h-full object-cover group-hover:scale-105 group-hover:rotate-1 transition duration-700 ease-out"
             />
             
-            {/* Dark overlay scrim */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent pointer-events-none" />
-            
-            {/* Inner Border Sync */}
-            <div 
-              className="absolute inset-0 border border-white/20 pointer-events-none" 
-              style={{ clipPath: "polygon(12% 0%, 100% 0%, 100% 88%, 88% 100%, 0% 100%, 0% 12%)" }}
-            />
+            {/* Vignette Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-brand-navy/20 pointer-events-none" />
           </div>
 
         </motion.div>
