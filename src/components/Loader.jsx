@@ -4,37 +4,34 @@ const Loader = () => {
   return (
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-brand-navy overflow-hidden">
       
-      <div className="relative flex items-center justify-center w-40 h-40">
-        {[0, 0.8, 1.6].map((delay, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full border border-white"
-            style={{ width: 20, height: 20 }}
-            animate={{ scale: [1, 7], opacity: [0.6, 0] }}
-            transition={{ duration: 2.4, delay, repeat: Infinity, ease: "easeOut" }}
-          />
-        ))}
-        <motion.div 
-          className="absolute" 
-          style={{ originX: "50%", originY: "50%" }}
+      {/* Animated ring */}
+      <div className="relative flex items-center justify-center mb-8">
+        <motion.div
+          className="absolute w-24 h-24 rounded-full border-2 border-[#d6671c]/20"
+          animate={{ scale: [1, 1.35, 1], opacity: [0.4, 0, 0.4] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-16 h-16 rounded-full border-2 border-[#d6671c]/30"
+          animate={{ scale: [1, 1.5, 1], opacity: [0.6, 0, 0.6] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+        />
+
+        {/* Spinning arc */}
+        <motion.div
+          className="w-14 h-14 rounded-full border-2 border-transparent border-t-[#d6671c] border-r-[#d6671c]/40"
           animate={{ rotate: 360 }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "linear" }}
-        >
-          <div className="w-3 h-3 rounded-full bg-white" style={{ transform: "translateX(42px)" }} />
-        </motion.div>
-        <motion.div 
-          className="absolute"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 3.4, repeat: Infinity, ease: "linear" }}
-        >
-          <div className="w-2 h-2 rounded-full bg-white/60" style={{ transform: "translateX(60px)" }} />
-        </motion.div>
-        <motion.div 
-          className="w-5 h-5 rounded-full bg-white"
-          animate={{ scale: [1, 1.4, 1], opacity: [1, 0.7, 1] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 1.1, repeat: Infinity, ease: "linear" }}
+        />
+
+        {/* Inner dot */}
+        <motion.div
+          className="absolute w-3 h-3 rounded-full bg-[#d6671c]"
+          animate={{ scale: [1, 1.3, 1], opacity: [1, 0.6, 1] }}
+          transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
+
       <motion.p
         className="absolute top-6 text-xs tracking-[0.25em] uppercase font-bold text-white text-center px-4"
         animate={{ opacity: [0.4, 1, 0.4] }}
