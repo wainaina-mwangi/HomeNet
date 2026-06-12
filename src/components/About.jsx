@@ -25,8 +25,6 @@ const About = () => {
   return (
     <section className="about-section bg-brand-navy overflow-hidden py-16 md:py-24">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Side Content Column */}
         <motion.div
           className="about-content"
           variants={containerVariants}
@@ -56,7 +54,6 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right Side Image Column: Version 2 (Overlapping Depth Frames) */}
         <motion.div
           className="about-image relative flex justify-center items-center p-8"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -64,8 +61,8 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          {/* Underlay Decorative Frame 1 (Orange Border Offset) */}
-          <div className="absolute -bottom-2 -left-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square border-2 border-brand-orange/30 rounded-2xl pointer-events-none hidden sm:block transform -translate-x-4 translate-y-4" />
+         
+          <div className="absolute -bottom-2 -left-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square border-2 border-brand-white/30 rounded-2xl pointer-events-none hidden sm:block transform -translate-x-4 translate-y-4" />
 
           {/* Underlay Decorative Frame 2 (Deep Slate Offset) */}
           <div className="absolute -top-2 -right-2 w-full max-w-md aspect-square md:aspect-[4/3] lg:aspect-square bg-white/5 rounded-2xl pointer-events-none hidden sm:block transform translate-x-4 -translate-y-4" />
