@@ -4,7 +4,6 @@ const Loader = () => {
   return (
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-brand-navy overflow-hidden">
       
-      {/* Centre Layout — Ripples, Orbiting Nodes, and Core */}
       <div className="relative flex items-center justify-center w-40 h-40">
         {[0, 0.8, 1.6].map((delay, i) => (
           <motion.div
@@ -37,7 +36,7 @@ const Loader = () => {
         />
       </div>
       <motion.p
-        className="absolute bottom-6 text-xs tracking-[0.25em] uppercase font-bold text-white text-center px-4"
+        className="absolute top-6 text-xs tracking-[0.25em] uppercase font-bold text-white text-center px-4"
         animate={{ opacity: [0.4, 1, 0.4] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
