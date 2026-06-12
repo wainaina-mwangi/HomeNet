@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 
 const Loader = () => {
   return (
+    // Clean, centered Flexbox column layout
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-brand-navy overflow-hidden">
       
-      {/* Animated ring */}
-      <div className="relative flex items-center justify-center mb-8">
+      {/* Animated Rings Group */}
+      <div className="relative flex items-center justify-center w-24 h-24">
         <motion.div
           className="absolute w-24 h-24 rounded-full border-2 border-[#d6671c]/20"
           animate={{ scale: [1, 1.35, 1], opacity: [0.4, 0, 0.4] }}
@@ -32,12 +33,13 @@ const Loader = () => {
         />
       </div>
 
+      {/* Welcome Text — Pushed cleanly down with mt-8 */}
       <motion.p
-        className="mt-10 text-2xl font-semibold text-white text-xs tracking-[0.25em] uppercase  text-white text-center px-4"
+        className="mt-8 text-sm font-semibold tracking-[0.25em] uppercase text-white text-center px-4"
         animate={{ opacity: [0.4, 1, 0.4] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-     Welcome to HomeNet...
+        Welcome to HomeNet...
       </motion.p>
       
     </div>
